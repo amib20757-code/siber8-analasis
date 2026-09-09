@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kebakaran Hebat Hanguskan Puluhan Rumah di Asrama Kodam Mattoanging Makassar</title>
+    <style>
+        @page {
+            size: A4;
+            margin: 20mm 15mm;
+            background-color: #fdfbf7;
+        }
+        *, *::before, *::after {
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Arial', sans-serif;
+            color: #2b2b2b;
+            line-height: 1.4;
+            margin: 0;
+            padding: 0;
+            background-color: #fdfbf7;
+        }
+        
+        /* Container Utama dengan Nuansa Kartu Berita Elegan */
+        .page-wrapper {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #ffffff;
+            padding: 30px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            border-top: 6px solid #1e3a8a;
+            position: relative;
+        }
+
+        /* Watermark atau Ornamen Khas Makassar di Latar Belakang */
+        .page-wrapper::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 400px;
+            height: 400px;
+            background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Phinisi_silhouette.svg/1024px-Phinisi_silhouette.svg.png');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+            opacity: 0.03;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .header-container {
+            text-align: center;
+            border-bottom: 3px double #b91c1c;
+            padding-bottom: 15px;
+            margin-bottom: 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .logo-wrapper {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            margin-bottom: 5px;
+        }
+        .logo-icon {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #1e3a8a, #b91c1c);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 900;
+            font-size: 24pt;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .logo-text-group {
+            text-align: left;
+        }
+        .portal-name {
+            font-size: 26pt;
+            font-weight: 900;
+            color: #1e3a8a;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            margin: 0;
+            line-height: 1;
+        }
+        .portal-sub {
+            font-size: 10pt;
+            color: #f97316;
+            font-weight: bold;
+            letter-spacing: 1.2px;
+            text-transform: uppercase;
+            margin: 4px 0 0 0;
+        }
+        .portal-tagline {
+            font-size: 8.5pt;
+            color: #555;
+            font-style: italic;
+            margin-top: 6px;
+        }
+        
+        /* Banner Visual Khas Makassar */
+        .makassar-banner {
+            width: 100%;
+            height: 160px;
+            background: linear-gradient(rgba(30, 58, 138, 0.8), rgba(185, 28, 28, 0.8)), url('https://images.unsplash.com/photo-1588668214407-6ea1a6d8c272?auto=format&fit=crop&w=1200&q=80');
+            background-size: cover;
+            background-position: center;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            position: relative;
+            z-index: 1;
+        }
+        .makassar-banner h3 {
+            margin: 0 0 6px 0;
+            font-size: 14pt;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+        }
+        .makassar-banner p {
+            margin: 0;
+            font-size: 9.5pt;
+            color: #f1f5f9;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+        }
+
+        .article-meta {
+            font-size: 9pt;
+            color: #666;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-top: 10px;
+        }
+        h1 {
+            font-size: 18pt;
+            color: #111;
+            line-height: 1.3;
+            margin: 15px 0 12px 0;
+            text-align: left;
+            position: relative;
+            z-index: 1;
+        }
+        .author-box {
+            font-size: 10pt;
+            font-weight: bold;
+            color: #b91c1c;
+            border-left: 4px solid #b91c1c;
+            padding-left: 10px;
+            margin-bottom: 16px;
+            position: relative;
+            z-index: 1;
+        }
+        p {
+            font-size: 10.5pt;
+            text-align: justify;
+            margin-bottom: 12px;
+            position: relative;
+            z-index: 1;
+        }
+        .lead {
+            font-size: 11pt;
+            font-weight: bold;
+            color: #333;
+        }
+        h2 {
+            font-size: 13pt;
+            color: #1e3a8a;
+            border-bottom: 1px solid #cbd5e1;
+            padding-bottom: 4px;
+            margin-top: 18px;
+            margin-bottom: 10px;
+            page-break-after: avoid;
+            position: relative;
+            z-index: 1;
+        }
+        blockquote {
+            background-color: #f1f5f9;
+            border-left: 4px solid #1e3a8a;
+            margin: 15px 0;
+            padding: 10px 15px;
+            font-style: italic;
+            font-size: 10pt;
+            color: #334155;
+            position: relative;
+            z-index: 1;
+        }
+        .footer {
+            margin-top: 25px;
+            border-top: 1px solid #cbd5e1;
+            padding-top: 8px;
+            text-align: center;
+            font-size: 8.5pt;
+            color: #777;
+            position: relative;
+            z-index: 1;
+        }
+    </style>
+</head>
+<body>
+
+<div class="page-wrapper">
+    <div class="header-container">
+        <div class="logo-wrapper">
+            <div class="logo-icon">M</div>
+            <div class="logo-text-group">
+                <div class="portal-name">Makassar Update</div>
+                <div class="portal-sub">Berita Terkini & Terpercaya</div>
+            </div>
+        </div>
+        <div class="portal-tagline">&mdash; Jurnalisme Cepat, Akurat, dan Berimbang &mdash;</div>
+        <div class="article-meta">Makassar, 9 September 2026 | Kategori: Ekonomi, Bisnis, dan Sosial-Kebijakan Publik | Reporter: Maman</div>
+    </div>
+
+    <!-- Banner Nuansa Khas Makassar -->
+    <div class="makassar-banner">
+        <h3>Pusat Informasi & Peristiwa Kota Makassar</h3>
+        <p>Menyajikan Laporan Cepat Seputar Kota Anging Mammiri</p>
+    </div>
+
+    <h1>Krisis Energi di Makassar, DPRD dan Polda Sulsel Usut Potensi Penimbunan BBM serta LPG 3 Kg</h1>
+    
+    <div class="author-box">
+        Oleh: Maman Bagus | Editor: Redaksi Makassar Update
+    </div>
+
+    <p class="lead"><strong>MAKASSAR</strong> — Kota Makassar dan sejumlah wilayah di Sulawesi Selatan dihadapkan pada situasi krisis energi menyusul kelangkaan Bahan Bakar Minyak (BBM)—khususnya jenis Pertalite dan Solar bersubsidi—serta gas LPG 3 kilogram. Kondisi ini memicu antrean panjang di berbagai Stasiun Pengisian Bahan Bakar Umum (SPBU) serta keresahan di tengah masyarakat akibat sulitnya mendapatkan pasokan energi harian.</p>
+
+    <p>Berdasarkan pemantauan di lapangan, kelangkaan gas "melon" bersubsidi membuat harga di tingkat eceran melonjak jauh melampaui ketentuan normal, bahkan menyentuh angka hingga Rp30 ribu per tabung. Sementara itu, para pengendara kendaraan pribadi maupun pelaku usaha kecil terpaksa harus berputar-putar dan mengantre berjam-jam demi mendapatkan bahan bakar di SPBU maupun pedagang eceran.</p>
+
+    <p>Pihak Pertamina Patra Niaga Regional Sulawesi memberikan penjelasan bahwa peningkatan kebutuhan LPG 3 kg dipicu oleh lonjakan aktivitas masyarakat, sektor pertanian, serta momentum peringatan Maulid Nabi Muhammad SAW. Selain itu, pihak Pertamina juga berupaya melakukan penyesuaian operasional dan menambah suplai di titik-titik dengan tingkat kebutuhan yang tinggi.</p>
+
+    <p>Menanggapi situasi yang kian mendesak ini, unsur legislatif dan aparat penegak hukum langsung mengambil langkah tegas. DPRD Sulawesi Selatan dan DPRD Kota Makassar mendesak Pertamina untuk transparan membuka data stok serta mengevaluasi rantai distribusi agar tepat sasaran. Di sisi lain, Polda Sulawesi Selatan melalui Direktorat Reserse Kriminal Khusus (Ditreskrimsus) resmi turun tangan melakukan penyelidikan mendalam guna mengusut potensi adanya praktik penimbunan maupun mafia distribusi BBM dan LPG.</p>
+
+    <blockquote>
+        &ldquo;“Ya, terkait dengan langkanya BBM, tentu kita tidak akan diam. Nanti dari Krimsus akan tetap melakukan penyelidikan. Apakah itu ada mafia atau tidak ada mafia, nanti akan kita sampaikan kembali. Yang jelas, Polda akan tetap melakukan kegiatan penyelidikan. Kalau memang ada, pasti akan kita tindak lanjuti,” &rdquo; tegas Kabid Humas Polda Sulsel, Kombes Pol Didik Supranoto.
+    </blockquote>
+
+    <h2>Pihak Polisi</h2>
+
+    <p>Lebih lanjut, para wakil rakyat menyoroti bahwa kelangkaan energi ini memberikan dampak domino yang cukup berat bagi perekonomian masyarakat, terutama pelaku Usaha Mikro, Kecil, dan Menengah (UMKM), serta sektor distribusi air bersih yang sangat bergantung ketersediaan solar.</p>
+    
+    <p>Di samping itu, penegawasan di tingkat pengecer dan pangkalan terus diperketat oleh instansi terkait bersama pemerintah daerah. Langkah ini dinilai krusial agar pasokan energi bersubsidi dapat segera kembali normal dan benar-benar dinikmati oleh masyarakat yang berhak, tanpa adanya penyalahgunaan oleh oknum tak bertanggung jawab.</p>
+
+    <p>Pemerintah Kota Makassar bersama instansi terkait juga didorong untuk memperkuat koordinasi lintas sektoral guna memantau alur distribusi secara berkala. Hal ini diharapkan mampu meredam kepanikan warga sekaligus memulihkan stabilitas ketersediaan energi di tengah dinamika kebutuhan masyarakat yang terus meningkat.</p>
+
+    <h2>Krisis Energi Makassar</h2>
+
+    <p>Krisis energi melanda Kota Makassar akibat kelangkaan Bahan Bakar Minyak bersubsidi dan gas LPG 3 kilogram yang memicu antrean panjang di berbagai SPBU. Menanggapi situasi ini, DPRD Sulawesi Selatan dan Polda Sulsel langsung turun tangan mengusut potensi penimbunan serta mafia distribusi yang merugikan masyarakat dan pelaku UMKM.</p>
+
+    <p>Pertamina dan Hiswana Migas mengimbau warga agar tidak melakukan panic buying, sementara pengawasan di tingkat pangkalan diperketat untuk mencegah kebocoran subsidi. Pemerintah bersama aparat penegak hukum berkomitmen menindak tegas oknum yang menjual di atas HET demi memulihkan stabilitas energi secepatnya.</p>
+
+    <div class="footer">
+        &copy; 2026 Makassar Update. Hak cipta dilindungi undang-undang.
+    </div>
+</div>
+
+</body>
+</html>

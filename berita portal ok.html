@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kebakaran Hebat Hanguskan Puluhan Rumah di Asrama Kodam Mattoanging Makassar</title>
+    <style>
+        @page {
+            size: A4;
+            margin: 20mm 15mm;
+            background-color: #fdfbf7;
+        }
+        *, *::before, *::after {
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Arial', sans-serif;
+            color: #2b2b2b;
+            line-height: 1.4;
+            margin: 0;
+            padding: 0;
+            background-color: #fdfbf7;
+        }
+        
+        /* Container Utama dengan Nuansa Kartu Berita Elegan */
+        .page-wrapper {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #ffffff;
+            padding: 30px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            border-top: 6px solid #1e3a8a;
+            position: relative;
+        }
+
+        /* Watermark atau Ornamen Khas Makassar di Latar Belakang */
+        .page-wrapper::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 400px;
+            height: 400px;
+            background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Phinisi_silhouette.svg/1024px-Phinisi_silhouette.svg.png');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+            opacity: 0.03;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .header-container {
+            text-align: center;
+            border-bottom: 3px double #b91c1c;
+            padding-bottom: 15px;
+            margin-bottom: 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .logo-wrapper {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            margin-bottom: 5px;
+        }
+        .logo-icon {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #1e3a8a, #b91c1c);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 900;
+            font-size: 24pt;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .logo-text-group {
+            text-align: left;
+        }
+        .portal-name {
+            font-size: 26pt;
+            font-weight: 900;
+            color: #1e3a8a;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            margin: 0;
+            line-height: 1;
+        }
+        .portal-sub {
+            font-size: 10pt;
+            color: #f97316;
+            font-weight: bold;
+            letter-spacing: 1.2px;
+            text-transform: uppercase;
+            margin: 4px 0 0 0;
+        }
+        .portal-tagline {
+            font-size: 8.5pt;
+            color: #555;
+            font-style: italic;
+            margin-top: 6px;
+        }
+        
+        /* Banner Visual Khas Makassar */
+        .makassar-banner {
+            width: 100%;
+            height: 160px;
+            background: linear-gradient(rgba(30, 58, 138, 0.8), rgba(185, 28, 28, 0.8)), url('https://images.unsplash.com/photo-1588668214407-6ea1a6d8c272?auto=format&fit=crop&w=1200&q=80');
+            background-size: cover;
+            background-position: center;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            position: relative;
+            z-index: 1;
+        }
+        .makassar-banner h3 {
+            margin: 0 0 6px 0;
+            font-size: 14pt;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+        }
+        .makassar-banner p {
+            margin: 0;
+            font-size: 9.5pt;
+            color: #f1f5f9;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+        }
+
+        .article-meta {
+            font-size: 9pt;
+            color: #666;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-top: 10px;
+        }
+        h1 {
+            font-size: 18pt;
+            color: #111;
+            line-height: 1.3;
+            margin: 15px 0 12px 0;
+            text-align: left;
+            position: relative;
+            z-index: 1;
+        }
+        .author-box {
+            font-size: 10pt;
+            font-weight: bold;
+            color: #b91c1c;
+            border-left: 4px solid #b91c1c;
+            padding-left: 10px;
+            margin-bottom: 16px;
+            position: relative;
+            z-index: 1;
+        }
+        p {
+            font-size: 10.5pt;
+            text-align: justify;
+            margin-bottom: 12px;
+            position: relative;
+            z-index: 1;
+        }
+        .lead {
+            font-size: 11pt;
+            font-weight: bold;
+            color: #333;
+        }
+        h2 {
+            font-size: 13pt;
+            color: #1e3a8a;
+            border-bottom: 1px solid #cbd5e1;
+            padding-bottom: 4px;
+            margin-top: 18px;
+            margin-bottom: 10px;
+            page-break-after: avoid;
+            position: relative;
+            z-index: 1;
+        }
+        blockquote {
+            background-color: #f1f5f9;
+            border-left: 4px solid #1e3a8a;
+            margin: 15px 0;
+            padding: 10px 15px;
+            font-style: italic;
+            font-size: 10pt;
+            color: #334155;
+            position: relative;
+            z-index: 1;
+        }
+        .footer {
+            margin-top: 25px;
+            border-top: 1px solid #cbd5e1;
+            padding-top: 8px;
+            text-align: center;
+            font-size: 8.5pt;
+            color: #777;
+            position: relative;
+            z-index: 1;
+        }
+    </style>
+</head>
+<body>
+
+<div class="page-wrapper">
+    <div class="header-container">
+        <div class="logo-wrapper">
+            <div class="logo-icon">M</div>
+            <div class="logo-text-group">
+                <div class="portal-name">Makassar Update</div>
+                <div class="portal-sub">Berita Terkini & Terpercaya</div>
+            </div>
+        </div>
+        <div class="portal-tagline">&mdash; Jurnalisme Cepat, Akurat, dan Berimbang &mdash;</div>
+        <div class="article-meta">Makassar, 1 September 2026 | Kategori: Peristiwa & Kebakaran | Reporter: Maman</div>
+    </div>
+
+    <!-- Banner Nuansa Khas Makassar -->
+    <div class="makassar-banner">
+        <h3>Pusat Informasi & Peristiwa Kota Makassar</h3>
+        <p>Menyajikan Laporan Cepat Seputar Kota Anging Mammiri</p>
+    </div>
+
+    <h1>Kebakaran Hebat Hanguskan Puluhan Rumah di Asrama Kodam Mattoanging Makassar, Sempat Diwarnai Mati Lampu</h1>
+    
+    <div class="author-box">
+        Oleh: Maman | Editor: Redaksi Makassar Update
+    </div>
+
+    <p class="lead"><strong>MAKASSAR</strong> — Insiden kebakaran hebat melanda kompleks Asrama Kodam Mattoanging yang terletak di persimpangan Jalan Padjonga Daeng Ngalle dan Jalan Opu Daeng Risadju (Eks Jalan Cendrawasih/Kakatua), Kecamatan Mariso, Kota Makassar, Selasa (1/9/2026) siang. Peristiwa yang menghanguskan puluhan rumah warga ini sempat membuat panik masyarakat sekitar.</p>
+
+    <p>Berdasarkan data Dinas Pemadam Kebakaran dan Penyelamatan (Damkarmat) Kota Makassar, laporan awal kebakaran diterima oleh pihak Mako Damkar sekitar pukul 13.41 Wita. Kobaran api dengan cepat membesar dan melahap bangunan perumahan di kompleks tersebut.</p>
+
+    <p>Kepala Dinas Damkarmat Makassar mengungkapkan bahwa proses pemadaman berlangsung selama kurang lebih 1 jam 20 menit. Sebanyak 25 unit armada pemadam kebakaran ditambah 1 unit tim <em>rescue</em> dengan total 78 personel dikerahkan berjibaku ke lokasi kejadian untuk menjinakkan si jago merah.</p>
+
+    <p>Kendati demikian, petugas sempat mengalami sejumlah kendala di lapangan.</p>
+
+    <blockquote>
+        &ldquo;Akses jalan masuk cukup kecil, kemudian angin bertiup sangat kencang saat pemadaman berlangsung. Ini yang mempercepat proses penyebaran api dari satu bangunan ke bangunan lainnya,&rdquo; ujar perwakilan Damkar Makassar.
+    </blockquote>
+
+    <h2>Dugaan Kemunculan Api Usai Listrik Menyala</h2>
+    
+    <p>Sejumlah saksi mata dan warga setempat menyebutkan bahwa insiden kebakaran ini terjadi tidak lama setelah pemadaman listrik bergilir melanda kawasan tersebut.</p>
+
+    <p>&ldquo;Penyebab sementara masih dalam penyelidikan pihak berwenang. Tadi sempat mati lampu, kemudian begitu listrik menyala kembali, langsung muncul titik api,&rdquo; kata petugas di lapangan. Kendati demikian, aparat kepolisian bersama TNI masih melakukan investigasi mendalam untuk memastikan penyebab pasti kebakaran.</p>
+
+    <h2>Puluhan Rumah Terdampak dan Pengungsian</h2>
+
+    <p>Dampak dari musibah ini, puluhan rumah warga dilaporkan mengalami kerusakan berat dan ringan, serta berdampak pada puluhan jiwa yang harus kehilangan tempat tinggal sementara. Beruntung, tidak ada laporan korban jiwa dalam peristiwa tersebut, meski beberapa warga sempat dilaporkan mengalami luka-luka ringan dan sesak napas akibat kepulan asap tebal.</p>
+
+    <p>Pihak TNI bersama pemerintah setempat dan Badan Penanggulangan Bencana Daerah (BPBD) langsung bergerak cepat mendirikan posko darurat serta dapur umum. Sebagian warga korban terdampak untuk sementara mengungsi di area lapangan tengah kompleks dan sekitar masjid sembari menunggu penanganan lebih lanjut.</p>
+
+    <div class="footer">
+        &copy; 2026 Makassar Update. Hak cipta dilindungi undang-undang.
+    </div>
+</div>
+
+</body>
+</html>
