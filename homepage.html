@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="id"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><title>SANSIDAM XIV/HASANUDDIN - Cyber Defense Platform</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Chivo:ital,wght@0,300;0,400;0,600;0,700;1,400&amp;family=JetBrains+Mono:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"on-tertiary-fixed-variant":"#653e00","error":"#ffb4ab","on-primary-container":"#007128","on-background":"#dde3ed","on-tertiary":"#472a00","surface-container-high":"#252a32","on-surface":"#dde3ed","outline-variant":"#3b4b3a","tertiary-fixed-dim":"#ffb95f","error-container":"#93000a","surface-tint":"#00e55b","background":"#0e141b","primary-fixed":"#6bff83","inverse-on-surface":"#2b3139","on-primary-fixed":"#002107","on-secondary-container":"#8fc195","surface-container-highest":"#2f353d","surface":"#0e141b","on-error-container":"#ffdad6","surface-dim":"#0e141b","secondary":"#a0d3a5","secondary-fixed-dim":"#a0d3a5","on-primary-fixed-variant":"#00531b","on-tertiary-container":"#895600","secondary-fixed":"#bcefc0","surface-container":"#1a2027","on-surface-variant":"#b9ccb5","inverse-primary":"#006e27","secondary-container":"#22502d","tertiary-container":"#ffd7aa","on-secondary-fixed":"#00210a","primary-fixed-dim":"#00e55b","tertiary":"#fff9f6","tertiary-fixed":"#ffddb8","on-secondary-fixed-variant":"#22502d","surface-container-lowest":"#090f16","inverse-surface":"#dde3ed","on-primary":"#003911","on-secondary":"#073918","surface-container-low":"#161c23","outline":"#849581","surface-bright":"#343a42","primary-container":"#00ff66","primary":"#edffe8","on-error":"#690005","surface-variant":"#2f353d","on-tertiary-fixed":"#2a1700"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"space-sm":"0.5rem","space-xl":"1.5rem","space-lg":"1rem","space-3xl":"3rem","space-xs":"0.25rem","space-md":"0.75rem","hud-edge-inset":"1.5rem","space-2xs":"0.125rem","space-2xl":"2rem","panel-padding":"1rem","grid-gutter":"0.75rem"},"fontFamily":{"body-lg":["Chivo"],"classification-stamp":["JetBrains Mono"],"body-md":["Chivo"],"telemetry-lg":["JetBrains Mono"],"display-command-mobile":["Space Grotesk"],"headline-sm":["Space Grotesk"],"telemetry-md":["JetBrains Mono"],"display-command":["Space Grotesk"],"body-sm":["Chivo"],"telemetry-sm":["JetBrains Mono"],"headline-xl":["Space Grotesk"],"headline-xl-mobile":["Space Grotesk"],"headline-md":["Space Grotesk"]},"fontSize":{"body-lg":["16px",{"lineHeight":"24px","fontWeight":"400"}],"classification-stamp":["10px",{"lineHeight":"12px","letterSpacing":"0.18em","fontWeight":"700"}],"body-md":["14px",{"lineHeight":"20px","fontWeight":"400"}],"telemetry-lg":["16px",{"lineHeight":"20px","letterSpacing":"0.05em","fontWeight":"600"}],"display-command-mobile":["30px",{"lineHeight":"36px","letterSpacing":"-0.01em","fontWeight":"700"}],"headline-sm":["16px",{"lineHeight":"22px","letterSpacing":"0.04em","fontWeight":"600"}],"telemetry-md":["13px",{"lineHeight":"18px","letterSpacing":"0.04em","fontWeight":"500"}],"display-command":["48px",{"lineHeight":"52px","letterSpacing":"-0.02em","fontWeight":"700"}],"body-sm":["12px",{"lineHeight":"18px","fontWeight":"400"}],"telemetry-sm":["11px",{"lineHeight":"14px","letterSpacing":"0.08em","fontWeight":"500"}],"headline-xl":["32px",{"lineHeight":"38px","letterSpacing":"-0.01em","fontWeight":"700"}],"headline-xl-mobile":["24px",{"lineHeight":"30px","letterSpacing":"0em","fontWeight":"600"}],"headline-md":["20px",{"lineHeight":"26px","letterSpacing":"0.02em","fontWeight":"600"}]}}}};</script></head><body class="bg-surface font-body-md text-on-surface antialiased selection:bg-primary-container selection:text-on-primary-container min-h-screen"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-lowest z-50 flex flex-col justify-between shadow-[0_1px_8px_rgba(0,0,0,0.3)]"><div class="flex flex-col"><div class="px-space-lg py-space-md bg-surface-container-low flex items-center justify-between"><div class="flex items-center gap-space-sm"><div class="w-2.5 h-2.5 bg-primary-container animate-pulse"></div><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-primary uppercase tracking-widest">SANSIDAM XIV</span><span class="font-telemetry-sm text-telemetry-sm text-on-surface-variant">KODAM HASANUDDIN</span></div></div><span class="font-classification-stamp text-classification-stamp px-space-xs py-space-2xs bg-secondary-container text-on-secondary-container uppercase">MIL-OPS</span></div><div class="px-space-lg py-space-xs bg-surface-container flex items-center justify-between"><span class="font-telemetry-sm text-telemetry-sm text-on-surface-variant">SEC-LEVEL</span><span class="font-telemetry-sm text-telemetry-sm text-primary-fixed-dim uppercase">ENCR-AES256-GCM</span></div><nav class="flex flex-col gap-space-xs px-space-md py-space-lg" data-active-classes="bg-secondary-container text-on-secondary-container font-semibold"><a aria-current="page" class="flex items-center gap-space-md px-space-md py-space-sm transition-all group bg-secondary-container text-on-secondary-container font-semibold" data-path="pusat-komando" href="#"><span class="material-symbols-outlined text-[18px]">grid_view</span><span class="font-body-md text-body-md">Pusat Komando</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all group" data-path="akses-looker-studio" href="#"><span class="material-symbols-outlined text-[18px]">analytics</span><span class="font-body-md text-body-md">Akses Looker Studio</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all group" data-path="autentikasi-kredensial" href="#"><span class="material-symbols-outlined text-[18px]">key</span><span class="font-body-md text-body-md">Autentikasi &amp; Kredensial</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all group" data-path="log-insiden-siber" href="#"><span class="material-symbols-outlined text-[18px]">security_update_warning</span><span class="font-body-md text-body-md">Log Insiden Siber</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all group" data-path="sop-dokumen-sandi" href="#"><span class="material-symbols-outlined text-[18px]">shield</span><span class="font-body-md text-body-md">SOP &amp; Dokumen Sandi</span></a></nav></div><div class="p-space-md bg-surface-container-low flex flex-col gap-space-sm"><div class="flex items-center justify-between p-space-sm bg-surface-container"><div class="flex items-center gap-space-xs"><span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span><span class="font-telemetry-sm text-telemetry-sm text-on-surface-variant">NODE LATENCY</span></div><span class="font-telemetry-sm text-telemetry-sm text-secondary-fixed-dim">14ms [SECURE]</span></div><a class="flex items-center justify-between px-space-md py-space-sm bg-error-container/40 text-on-error-container hover:bg-error-container hover:text-on-error transition-colors" data-path="login" href="#"><span class="font-telemetry-sm text-telemetry-sm uppercase tracking-wider font-bold">SELESAI TUGAS (LOGOUT)</span><span class="material-symbols-outlined text-[16px]">power_settings_new</span></a></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface-container-lowest/95 backdrop-blur-md z-40 flex items-center justify-between px-space-xl shadow-[0_1px_8px_rgba(0,0,0,0.25)]"><div class="flex items-center gap-space-lg"><div class="flex items-center gap-space-xs px-space-sm py-space-2xs bg-secondary-container/50"><span class="font-classification-stamp text-classification-stamp text-error uppercase tracking-widest animate-pulse font-bold">RAHASIA // SECRET</span></div><div class="h-4 w-px bg-outline-variant"></div><div class="flex items-center gap-space-sm"><span class="font-telemetry-sm text-telemetry-sm text-on-surface-variant">STATUS CYBER:</span><div class="flex items-center gap-space-xs px-space-sm py-space-2xs bg-surface-container-high"><span class="w-2 h-2 rounded-full bg-tertiary-fixed-dim"></span><span class="font-telemetry-sm text-telemetry-sm text-tertiary-fixed-dim uppercase font-semibold">DEFCON 2 // ELEVATED</span></div></div></div><div class="flex items-center gap-space-xl"><div class="flex items-center gap-space-md bg-surface-container px-space-md py-space-xs"><div class="flex flex-col items-end"><span class="font-classification-stamp text-classification-stamp text-on-surface-variant">TACTICAL CLOCK (UTC)</span><span class="font-telemetry-md text-telemetry-md text-primary font-mono">04:28:19 UTC</span></div><div class="h-6 w-px bg-outline-variant"></div><div class="flex flex-col items-start"><span class="font-classification-stamp text-classification-stamp text-secondary">LOKAL (WITA)</span><span class="font-telemetry-md text-telemetry-md text-primary font-mono">12:28:19 WITA</span></div></div><div class="flex items-center gap-space-md pl-space-md bg-surface-container-low py-space-xs px-space-sm"><div class="flex flex-col text-right"><span class="font-body-sm text-body-sm font-bold text-on-surface leading-tight">Kapten Inf. Adelia P.</span><span class="font-telemetry-sm text-telemetry-sm text-secondary leading-tight">Operator Sandi Utama</span></div><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-1 ring-secondary-container" src="https://lh3.googleusercontent.com/aida/AEtjO1VwImUcNzUh3_nVwdMBcANaBWpBFoWLV_R-fj2TCukNJaBz_Ih-nCUnE42cFbCXQjyplESZFmhRtZGQpew4TUE9VGKMGlEUPhU5kAmvGM8Sumd6btNCv2oTcNxaaTpEmbiAk6TNZNHcdmsfPkHmvuyJhUp_vXboEV15Y5B1u6dj7gNkpQ5EZ_RLSsteOJexxzIsDyBQesl9a0-55jboKz1D2cE0pbWejydukCDd1Jvj4VoFlY8e6wKmdGaP"/></div></div></header><main class="relative pt-16 bg-surface min-h-screen"><div class="flex flex-col w-full">
+<!-- Top Tactical Notification / Ticker -->
+<div class="w-full bg-surface-container-lowest px-space-xl py-space-xs flex flex-wrap items-center justify-between gap-space-md shadow-sm">
+<div class="flex items-center gap-space-md">
+<span class="inline-flex items-center gap-space-xs px-space-sm py-space-2xs bg-secondary-container text-primary-fixed-dim font-classification-stamp text-classification-stamp">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container animate-ping"></span>
+        DEF-SYS ONLINE
+      </span>
+<span class="font-telemetry-sm text-telemetry-sm text-on-surface-variant tracking-wider">
+        OTORITAS KOMANDO: <span class="text-primary font-semibold">KODAM XIV / HASANUDDIN</span> • SEKTOR SULAWESI SELATAN - BARAT - TENGGARA
+      </span>
+</div>
+<div class="flex items-center gap-space-lg">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[14px] text-tertiary-fixed-dim">verified_user</span>
+<span class="font-telemetry-sm text-telemetry-sm text-tertiary-fixed-dim uppercase">Protokol Keamanan: SANDI-XIV-MIL</span>
+</div>
+<div class="h-3 w-px bg-surface-container-high"></div>
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[14px] text-secondary">cloud_done</span>
+<span class="font-telemetry-sm text-telemetry-sm text-secondary">SYNC PUSAT: NORMAL (0.4ms)</span>
+</div>
+</div>
+</div>
+<!-- Operational Header Hero / Command Unit Identification -->
+<div class="px-space-xl py-space-xl bg-surface-container-low flex flex-col lg:flex-row lg:items-center justify-between gap-space-xl shadow-md">
+<div class="flex items-start sm:items-center gap-space-lg">
+<!-- Military Emblem Container -->
+<div class="relative flex-shrink-0 w-20 h-20 bg-surface-container-lowest flex items-center justify-center shadow-lg">
+<svg class="w-16 h-16" fill="none" viewbox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+<polygon fill="#0e141b" points="50,4 92,26 92,74 50,96 8,74 8,26" stroke="#00ff66" stroke-width="2.5"></polygon>
+<polygon fill="#161c23" points="50,12 84,30 84,70 50,88 16,70 16,30" stroke="#3b4b3a" stroke-width="1.2"></polygon>
+<line stroke="#00ff66" stroke-linecap="round" stroke-width="2.5" x1="25" x2="75" y1="36" y2="36"></line>
+<line stroke="#00ff66" stroke-linecap="round" stroke-width="2.5" x1="50" x2="50" y1="22" y2="58"></line>
+<polygon fill="#003911" points="50,48 70,68 30,68" stroke="#00ff66" stroke-width="2"></polygon>
+<circle cx="50" cy="60" fill="#00ff66" r="4.5"></circle>
+<line stroke="#849581" stroke-dasharray="3 3" stroke-width="1.5" x1="28" x2="72" y1="78" y2="78"></line>
+</svg>
+<span class="absolute -bottom-1 px-space-xs bg-primary text-on-primary font-classification-stamp text-classification-stamp tracking-tight">SND-XIV</span>
+</div>
+<div class="flex flex-col gap-space-2xs">
+<div class="flex flex-wrap items-center gap-space-sm">
+<span class="font-classification-stamp text-classification-stamp px-space-xs py-space-2xs bg-error text-on-error font-bold tracking-widest uppercase">
+            KLASIFIKASI: RAHASIA NEGARA // MILITARY CYBER OPS
+          </span>
+<span class="font-telemetry-sm text-telemetry-sm px-space-xs py-space-2xs bg-surface-container-high text-on-surface-variant font-mono">
+            REF ID: KDM-XIV/SND/2025-Q1
+          </span>
+</div>
+<h1 class="font-headline-xl text-headline-xl text-primary font-bold tracking-tight">
+          PUSAT KOMANDO SANDI &amp; SIBER KODAM XIV/HASANUDDIN
+        </h1>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-3xl">
+          Portal Terintegrasi Monitoring Pertahanan Jaringan Telekomunikasi Sandi, Analitika Telemetri Serangan Siber, dan Akses Dashboard Intelijen Looker Studio Komando Daerah Militer Hasanuddin.
+        </p>
+</div>
+</div>
+<!-- Quick Action / Readiness Controls -->
+<div class="flex flex-col sm:flex-row lg:flex-col items-stretch sm:items-center lg:items-end gap-space-sm flex-shrink-0">
+<div class="flex items-center justify-between gap-space-md px-space-md py-space-xs bg-surface-container-high w-full sm:w-auto">
+<div class="flex items-center gap-space-xs">
+<span class="w-2.5 h-2.5 rounded-full bg-primary-container animate-pulse"></span>
+<span class="font-telemetry-sm text-telemetry-sm text-on-surface-variant">SIAGA SIBER:</span>
+</div>
+<span class="font-telemetry-md text-telemetry-md text-primary-fixed font-bold tracking-wider">DEFCON 2 (ELEVATED)</span>
+</div>
+<div class="flex items-center gap-space-xs w-full sm:w-auto">
+<button class="flex-1 sm:flex-initial flex items-center justify-center gap-space-xs px-space-md py-space-sm bg-secondary-container text-on-secondary-container hover:bg-primary-container hover:text-on-primary-container transition-all" onclick="simulateSignalRefresh()">
+<span class="material-symbols-outlined text-[16px]">sync</span>
+<span class="font-telemetry-sm text-telemetry-sm uppercase font-bold tracking-wider">Segarkan Sinyal</span>
+</button>
+<button class="flex-1 sm:flex-initial flex items-center justify-center gap-space-xs px-space-md py-space-sm bg-error-container text-on-error-container hover:bg-error hover:text-on-error transition-all" onclick="emergencyAlertModal()">
+<span class="material-symbols-outlined text-[16px]">warning</span>
+<span class="font-telemetry-sm text-telemetry-sm uppercase font-bold tracking-wider">Kontinjensi</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Telemetry Overview / Core Metrics Array -->
+<div class="px-space-xl py-space-lg grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-space-md bg-surface">
+<!-- Card 1: Kesiapan Jaringan Sandi -->
+<div class="bg-surface-container p-space-md flex flex-col justify-between gap-space-md relative overflow-hidden shadow-sm">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-classification-stamp text-classification-stamp text-secondary font-semibold">JARINGAN KOMUNIKASI SANDI</span>
+<span class="font-display-command-mobile text-display-command-mobile text-primary font-bold font-mono">99.8%</span>
+</div>
+<div class="p-space-xs bg-secondary-container text-primary-container">
+<span class="material-symbols-outlined text-[24px]">sensors</span>
+</div>
+</div>
+<!-- Mini Sparkline Graph Inline SVG -->
+<div class="flex items-end justify-between gap-space-xs pt-space-xs">
+<svg class="w-full h-8 text-primary-container" fill="none" viewbox="0 0 160 30">
+<path d="M0,24 L20,22 L40,25 L60,18 L80,19 L100,8 L120,12 L140,5 L160,6" stroke="currentColor" stroke-linecap="round" stroke-width="2"></path>
+<path d="M0,24 L20,22 L40,25 L60,18 L80,19 L100,8 L120,12 L140,5 L160,6 L160,30 L0,30 Z" fill="currentColor" fill-opacity="0.12"></path>
+</svg>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant font-telemetry-sm text-telemetry-sm">
+<span class="flex items-center gap-space-2xs text-secondary"><span class="w-1.5 h-1.5 bg-primary-container rounded-full"></span> 64 Node Aktif</span>
+<span>LATENCY: 12ms</span>
+</div>
+</div>
+<!-- Card 2: Ancaman Siber Terdeteksi -->
+<div class="bg-surface-container p-space-md flex flex-col justify-between gap-space-md relative overflow-hidden shadow-sm">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-classification-stamp text-classification-stamp text-tertiary-fixed-dim font-semibold">TINGKAT ANCAMAN SIBER</span>
+<div class="flex items-baseline gap-space-xs">
+<span class="font-display-command-mobile text-display-command-mobile text-tertiary-fixed-dim font-bold font-mono">LEVEL 2</span>
+<span class="font-telemetry-sm text-telemetry-sm text-on-surface-variant font-bold">[WASPADA]</span>
+</div>
+</div>
+<div class="p-space-xs bg-surface-container-high text-tertiary-fixed-dim">
+<span class="material-symbols-outlined text-[24px]">fitbit_push_ups</span>
+</div>
+</div>
+<div class="w-full bg-surface-container-lowest h-2 overflow-hidden">
+<div class="bg-tertiary-fixed-dim h-full w-[42%]"></div>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant font-telemetry-sm text-telemetry-sm">
+<span class="text-tertiary-fixed-dim font-mono">14 MITIGASI / 24 JAM</span>
+<span>AGGRESSION: MODERATE</span>
+</div>
+</div>
+<!-- Card 3: Status Enkripsi Kripto -->
+<div class="bg-surface-container p-space-md flex flex-col justify-between gap-space-md relative overflow-hidden shadow-sm">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-classification-stamp text-classification-stamp text-secondary font-semibold">INTEGRITAS ENKRIPSI SANDI</span>
+<span class="font-display-command-mobile text-display-command-mobile text-primary font-bold font-mono">AES-256</span>
+</div>
+<div class="p-space-xs bg-secondary-container text-primary-container">
+<span class="material-symbols-outlined text-[24px]">lock</span>
+</div>
+</div>
+<div class="flex items-center gap-space-xs font-telemetry-sm text-telemetry-sm text-primary font-mono bg-surface-container-low px-space-sm py-space-2xs">
+<span class="material-symbols-outlined text-[14px] text-primary-fixed-dim">verified</span>
+<span>GCM CIPHERTEXT LOCK • OK</span>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant font-telemetry-sm text-telemetry-sm">
+<span>ROTASI KUNCI: 03:14:22 UTC</span>
+<span class="text-secondary font-semibold">SECURE</span>
+</div>
+</div>
+<!-- Card 4: Titik Pantau Terintegrasi -->
+<div class="bg-surface-container p-space-md flex flex-col justify-between gap-space-md relative overflow-hidden shadow-sm">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-classification-stamp text-classification-stamp text-secondary font-semibold">TITIK PANTAU TERPADU KODAM XIV</span>
+<div class="flex items-baseline gap-space-xs">
+<span class="font-display-command-mobile text-display-command-mobile text-primary font-bold font-mono">24</span>
+<span class="font-telemetry-sm text-telemetry-sm text-on-surface-variant font-bold">POS AKTIF</span>
+</div>
+</div>
+<div class="p-space-xs bg-secondary-container text-primary-container">
+<span class="material-symbols-outlined text-[24px]">hub</span>
+</div>
+</div>
+<div class="flex flex-wrap gap-space-2xs">
+<span class="font-classification-stamp text-classification-stamp px-space-xs py-space-2xs bg-surface-container-high text-secondary">MAKASSAR</span>
+<span class="font-classification-stamp text-classification-stamp px-space-xs py-space-2xs bg-surface-container-high text-secondary">GOWA</span>
+<span class="font-classification-stamp text-classification-stamp px-space-xs py-space-2xs bg-surface-container-high text-secondary">BONE</span>
+<span class="font-classification-stamp text-classification-stamp px-space-xs py-space-2xs bg-surface-container-high text-secondary">KENDARI</span>
+<span class="font-classification-stamp text-classification-stamp px-space-xs py-space-2xs bg-surface-container-high text-secondary">MAMUJU</span>
+<span class="font-classification-stamp text-classification-stamp px-space-xs py-space-2xs bg-surface-container-high text-secondary">PALOPO</span>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant font-telemetry-sm text-telemetry-sm">
+<span>KOREM 141, 142, 143</span>
+<span class="text-primary-container font-mono">100% LINKED</span>
+</div>
+</div>
+</div>
+<!-- Primary Operations Section: Looker Studio Dashboards Grid -->
+<div class="px-space-xl py-space-xl flex flex-col gap-space-lg bg-surface-dim">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-sm">
+<span class="w-3 h-3 bg-primary-container"></span>
+<h2 class="font-headline-md text-headline-md text-primary font-bold uppercase tracking-wide">
+            Gerbang Akses Dashboard Looker Studio Terpadu
+          </h2>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+          Pusat visualisasi data telemetri, trafik enkripsi, dan pendeteksian serangan siber berbasis Google Data Studio. Otorisasi militer aktif.
+        </p>
+</div>
+<div class="flex items-center gap-space-xs self-start md:self-auto bg-surface-container px-space-md py-space-xs">
+<span class="font-telemetry-sm text-telemetry-sm text-on-surface-variant">PROTOKOL TAMPILAN:</span>
+<span class="font-telemetry-sm text-telemetry-sm text-primary font-mono font-bold">HTTPS ENCRYPTED TUNNEL</span>
+</div>
+</div>
+<!-- 3 Big Tactical Dashboard Cards -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-space-lg">
+<!-- Report 01 -->
+<div class="bg-surface-container-low flex flex-col justify-between shadow-md group hover:bg-surface-container transition-all">
+<div class="p-space-lg flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<span class="font-classification-stamp text-classification-stamp px-space-xs py-space-2xs bg-surface-container-high text-primary-fixed font-bold font-mono">
+              REPORT_REF // SND-TRF-01
+            </span>
+<div class="flex items-center gap-space-xs px-space-xs py-space-2xs bg-secondary-container text-on-secondary-container font-telemetry-sm text-telemetry-sm">
+<span class="w-2 h-2 rounded-full bg-primary-container animate-pulse"></span>
+              TERHUBUNG
+            </div>
+</div>
+<div class="flex flex-col gap-space-2xs">
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold group-hover:text-primary transition-colors">
+              Monitoring Trafik Jaringan Siber
+            </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              Analisis throughput real-time, volume paket protokol sandi, pemetaan bandwidth satelit militer VSAT, dan stabilitas gateway Korem jajaran Kodam XIV.
+            </p>
+</div>
+<!-- Synthetic Mini Viz -->
+<div class="bg-surface-container-lowest p-space-md flex flex-col gap-space-sm">
+<div class="flex items-center justify-between font-telemetry-sm text-telemetry-sm text-on-surface-variant">
+<span>PEAK BANDWIDTH</span>
+<span class="text-primary font-mono">1.84 Gbps</span>
+</div>
+<div class="flex items-center justify-between font-telemetry-sm text-telemetry-sm text-on-surface-variant">
+<span>PACKET INTEGRITY</span>
+<span class="text-primary font-mono">99.994%</span>
+</div>
+<div class="flex items-center justify-between font-telemetry-sm text-telemetry-sm text-on-surface-variant">
+<span>LAST LOOKER SYNC</span>
+<span class="text-secondary font-mono">1 mnt lalu</span>
+</div>
+</div>
+</div>
+<div class="p-space-lg bg-surface-container flex flex-col gap-space-sm">
+<a class="w-full flex items-center justify-center gap-space-sm px-space-lg py-space-md bg-secondary-container hover:bg-primary-container text-on-secondary-container hover:text-on-primary-container transition-all font-telemetry-sm text-telemetry-sm uppercase font-bold tracking-wider shadow-sm" href="https://datastudio.google.com/reporting/ac8d4b67-c34c-4b2c-9310-89d60d0914cc" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[18px]">open_in_new</span>
+            Buka Dashboard Looker 01
+          </a>
+<button class="w-full flex items-center justify-center gap-space-xs px-space-md py-space-xs bg-surface-container-high hover:bg-surface-bright text-on-surface-variant hover:text-on-surface transition-all font-telemetry-sm text-telemetry-sm uppercase" onclick="toggleEmbedModal('https://datastudio.google.com/reporting/ac8d4b67-c34c-4b2c-9310-89d60d0914cc', 'Trafik Jaringan Siber (Report 01)')">
+<span class="material-symbols-outlined text-[15px]">splitscreen</span>
+            Pratinjau di Layar Utama
+          </button>
+</div>
+</div>
+<!-- Report 02 -->
+<div class="bg-surface-container-low flex flex-col justify-between shadow-md group hover:bg-surface-container transition-all">
+<div class="p-space-lg flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<span class="font-classification-stamp text-classification-stamp px-space-xs py-space-2xs bg-surface-container-high text-tertiary-fixed-dim font-bold font-mono">
+              REPORT_REF // SND-IDS-02
+            </span>
+<div class="flex items-center gap-space-xs px-space-xs py-space-2xs bg-tertiary-container text-on-tertiary-container font-telemetry-sm text-telemetry-sm">
+<span class="w-2 h-2 rounded-full bg-tertiary-fixed-dim"></span>
+              DETEKSI SIAGA
+            </div>
+</div>
+<div class="flex flex-col gap-space-2xs">
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold group-hover:text-primary transition-colors">
+              Analitik Ancaman &amp; Deteksi Intrusi (IDS/IPS)
+            </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              Pemantauan probe serangan, klasifikasi ancaman DDoS, inspeksi deep-packet anomali brute-force pada server Komando Utama, serta mitigasi honeypot aktif.
+            </p>
+</div>
+<!-- Synthetic Mini Viz -->
+<div class="bg-surface-container-lowest p-space-md flex flex-col gap-space-sm">
+<div class="flex items-center justify-between font-telemetry-sm text-telemetry-sm text-on-surface-variant">
+<span>INTRUSION ATTEMPTS</span>
+<span class="text-tertiary-fixed-dim font-mono">418 DITANGKAL</span>
+</div>
+<div class="flex items-center justify-between font-telemetry-sm text-telemetry-sm text-on-surface-variant">
+<span>HEURISTIC AI SCORE</span>
+<span class="text-primary font-mono">0.02 (STABIL)</span>
+</div>
+<div class="flex items-center justify-between font-telemetry-sm text-telemetry-sm text-on-surface-variant">
+<span>BLOCKED SUBNETS</span>
+<span class="text-secondary font-mono">89 CIDR Range</span>
+</div>
+</div>
+</div>
+<div class="p-space-lg bg-surface-container flex flex-col gap-space-sm">
+<a class="w-full flex items-center justify-center gap-space-sm px-space-lg py-space-md bg-secondary-container hover:bg-primary-container text-on-secondary-container hover:text-on-primary-container transition-all font-telemetry-sm text-telemetry-sm uppercase font-bold tracking-wider shadow-sm" href="https://datastudio.google.com/reporting/35d4a29b-b155-4378-b9db-e29fc3a59a77" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[18px]">open_in_new</span>
+            Buka Dashboard Looker 02
+          </a>
+<button class="w-full flex items-center justify-center gap-space-xs px-space-md py-space-xs bg-surface-container-high hover:bg-surface-bright text-on-surface-variant hover:text-on-surface transition-all font-telemetry-sm text-telemetry-sm uppercase" onclick="toggleEmbedModal('https://datastudio.google.com/reporting/35d4a29b-b155-4378-b9db-e29fc3a59a77', 'Analitik Ancaman &amp; Deteksi Intrusi (Report 02)')">
+<span class="material-symbols-outlined text-[15px]">splitscreen</span>
+            Pratinjau di Layar Utama
+          </button>
+</div>
+</div>
+<!-- Report 03 -->
+<div class="bg-surface-container-low flex flex-col justify-between shadow-md group hover:bg-surface-container transition-all">
+<div class="p-space-lg flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<span class="font-classification-stamp text-classification-stamp px-space-xs py-space-2xs bg-surface-container-high text-primary font-bold font-mono">
+              REPORT_REF // SND-SIG-03
+            </span>
+<div class="flex items-center gap-space-xs px-space-xs py-space-2xs bg-secondary-container text-on-secondary-container font-telemetry-sm text-telemetry-sm">
+<span class="w-2 h-2 rounded-full bg-primary-container"></span>
+              INTEL AKTIF
+            </div>
+</div>
+<div class="flex flex-col gap-space-2xs">
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold group-hover:text-primary transition-colors">
+              Laporan Intelijen Sinyal &amp; Sandi Taktis
+            </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              Rekapitulasi telegrafis sandi terkirim/diterima, pemantauan sinyal spektrum frekuensi HF/VHF jajaran Kodam XIV, serta pelacakan dispersi sinyal radio militer.
+            </p>
+</div>
+<!-- Synthetic Mini Viz -->
+<div class="bg-surface-container-lowest p-space-md flex flex-col gap-space-sm">
+<div class="flex items-center justify-between font-telemetry-sm text-telemetry-sm text-on-surface-variant">
+<span>TELEGRAM SANDI</span>
+<span class="text-primary font-mono">128 TERPROSES</span>
+</div>
+<div class="flex items-center justify-between font-telemetry-sm text-telemetry-sm text-on-surface-variant">
+<span>SPECTRUM OCCUPANCY</span>
+<span class="text-secondary font-mono">34.2% REGULER</span>
+</div>
+<div class="flex items-center justify-between font-telemetry-sm text-telemetry-sm text-on-surface-variant">
+<span>RADIO LINK MARGIN</span>
+<span class="text-primary font-mono">+18.5 dB</span>
+</div>
+</div>
+</div>
+<div class="p-space-lg bg-surface-container flex flex-col gap-space-sm">
+<a class="w-full flex items-center justify-center gap-space-sm px-space-lg py-space-md bg-secondary-container hover:bg-primary-container text-on-secondary-container hover:text-on-primary-container transition-all font-telemetry-sm text-telemetry-sm uppercase font-bold tracking-wider shadow-sm" href="https://datastudio.google.com/reporting/48cc8c12-14bf-41fa-aa4f-8b2323afb010" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[18px]">open_in_new</span>
+            Buka Dashboard Looker 03
+          </a>
+<button class="w-full flex items-center justify-center gap-space-xs px-space-md py-space-xs bg-surface-container-high hover:bg-surface-bright text-on-surface-variant hover:text-on-surface transition-all font-telemetry-sm text-telemetry-sm uppercase" onclick="toggleEmbedModal('https://datastudio.google.com/reporting/48cc8c12-14bf-41fa-aa4f-8b2323afb010', 'Intelijen Sinyal &amp; Telekomunikasi (Report 03)')">
+<span class="material-symbols-outlined text-[15px]">splitscreen</span>
+            Pratinjau di Layar Utama
+          </button>
+</div>
+</div>
+</div>
+</div>
+<!-- Interactive Looker Studio Display Container (Preview Frame) -->
+<div class="px-space-xl py-space-lg bg-surface-container-lowest hidden flex flex-col gap-space-md" id="liveViewerContainer">
+<div class="flex items-center justify-between bg-surface-container px-space-md py-space-sm">
+<div class="flex items-center gap-space-md">
+<span class="w-2.5 h-2.5 bg-primary-container animate-pulse"></span>
+<span class="font-headline-sm text-headline-sm text-primary font-mono uppercase" id="activeViewerTitle">
+          KONSOL TERPADU // LOOKER STUDIO LIVE STREAM
+        </span>
+</div>
+<div class="flex items-center gap-space-sm">
+<a class="px-space-md py-space-xs bg-secondary-container text-on-secondary-container hover:bg-primary-container hover:text-on-primary-container transition-all font-telemetry-sm text-telemetry-sm uppercase font-bold flex items-center gap-space-2xs" href="#" id="activeExternalLink" target="_blank">
+<span class="material-symbols-outlined text-[14px]">launch</span> Layar Penuh
+        </a>
+<button class="px-space-md py-space-xs bg-error-container text-on-error-container hover:bg-error hover:text-on-error transition-all font-telemetry-sm text-telemetry-sm uppercase font-bold" onclick="closeEmbedModal()">
+          Tutup Konsol
+        </button>
+</div>
+</div>
+<div class="w-full h-[620px] bg-background relative overflow-hidden flex items-center justify-center">
+<iframe allowfullscreen="" class="w-full h-full" id="lookerFrame" src=""></iframe>
+</div>
+</div>
+<!-- Split Tactical Section: Credentials & Incident Logs -->
+<div class="px-space-xl py-space-xl grid grid-cols-1 lg:grid-cols-12 gap-space-xl bg-surface">
+<!-- Left 5 Cols: Quick Authentication & Password Widget -->
+<div class="lg:col-span-5 flex flex-col gap-space-md bg-surface-container-low p-space-lg shadow-sm">
+<div class="flex items-center justify-between pb-space-sm">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary-container">vpn_key</span>
+<h3 class="font-headline-sm text-headline-sm text-primary uppercase font-bold tracking-wide">
+            Autentikasi &amp; Kredensial Personel
+          </h3>
+</div>
+<span class="font-classification-stamp text-classification-stamp px-space-xs py-space-2xs bg-secondary-container text-on-secondary-container uppercase">
+          STATUS: AUTHORIZED
+        </span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+        Kredensial operasional terotentikasi untuk akses sistem internal, portal intelijen Looker Studio, dan relai komunikasi sandi taktis. Simpan dengan kerahasiaan penuh.
+      </p>
+<!-- Credential Card 1 -->
+<div class="bg-surface-container p-space-md flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-classification-stamp text-classification-stamp text-on-surface-variant">IDENTITAS OPERATOR (USERNAME)</span>
+<span class="font-telemetry-sm text-telemetry-sm text-secondary font-mono">ID PROTOKOL 01</span>
+</div>
+<div class="flex items-center justify-between bg-surface-container-lowest px-space-md py-space-sm">
+<span class="font-telemetry-md text-telemetry-md text-primary font-mono select-all font-bold">SANSIDAM14_OPS</span>
+<button class="flex items-center gap-space-2xs px-space-sm py-space-2xs bg-secondary-container hover:bg-primary-container text-on-secondary-container hover:text-on-primary-container transition-all font-telemetry-sm text-telemetry-sm uppercase font-bold" onclick="copyToClipboard('SANSIDAM14_OPS', this)">
+<span class="material-symbols-outlined text-[14px]">content_copy</span>
+<span>Salin</span>
+</button>
+</div>
+</div>
+<!-- Credential Card 2 -->
+<div class="bg-surface-container p-space-md flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-classification-stamp text-classification-stamp text-on-surface-variant">KATA SANDI PROTOKOL (PASSWORD)</span>
+<span class="font-telemetry-sm text-telemetry-sm text-tertiary-fixed-dim font-mono">TOKEN DINAMIS 2025</span>
+</div>
+<div class="flex items-center justify-between bg-surface-container-lowest px-space-md py-space-sm">
+<div class="flex items-center gap-space-sm">
+<span class="font-telemetry-md text-telemetry-md text-primary font-mono select-all font-bold tracking-widest" id="maskedPass">••••••••••••••</span>
+<span class="hidden font-telemetry-md text-telemetry-md text-primary font-mono select-all font-bold" id="unmaskedPass">KODAM14_CYBER2025</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<button class="p-space-2xs text-on-surface-variant hover:text-primary transition-colors" onclick="togglePasswordVisibility()" title="Buka/Tutup Sandi">
+<span class="material-symbols-outlined text-[18px]" id="eyeIcon">visibility</span>
+</button>
+<button class="flex items-center gap-space-2xs px-space-sm py-space-2xs bg-secondary-container hover:bg-primary-container text-on-secondary-container hover:text-on-primary-container transition-all font-telemetry-sm text-telemetry-sm uppercase font-bold" onclick="copyToClipboard('KODAM14_CYBER2025', this)">
+<span class="material-symbols-outlined text-[14px]">content_copy</span>
+<span>Salin</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Tactical Security Notice Box -->
+<div class="bg-surface-container-high p-space-md flex items-start gap-space-md">
+<span class="material-symbols-outlined text-tertiary-fixed-dim text-[20px] flex-shrink-0">shield_lock</span>
+<div class="flex flex-col gap-space-2xs">
+<span class="font-telemetry-sm text-telemetry-sm text-tertiary-fixed-dim font-bold uppercase">PERINGATAN DOKTRIN PENGAMANAN</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Penggunaan kredensial ini tercatat otomatis dalam audit log Pusintelad &amp; BSSN. Dilarang membagikan kredensial melalui kanal publik tidak terenkripsi.
+          </p>
+</div>
+</div>
+<!-- Quick Session Controls -->
+<div class="flex items-center justify-between pt-space-xs">
+<span class="font-telemetry-sm text-telemetry-sm text-on-surface-variant">MASA AKTIF SESI: <span class="text-primary font-mono">07:54:12</span></span>
+<button class="text-secondary hover:text-primary transition-colors font-telemetry-sm text-telemetry-sm flex items-center gap-space-2xs uppercase" onclick="rotateLocalCredentials()">
+<span class="material-symbols-outlined text-[14px]">refresh</span> Minta Rotasi Tiket
+        </button>
+</div>
+</div>
+<!-- Right 7 Cols: Cyber Defense Telemetry Logs & Activity Stream -->
+<div class="lg:col-span-7 flex flex-col gap-space-md bg-surface-container-low p-space-lg shadow-sm">
+<div class="flex items-center justify-between pb-space-sm">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary-container">security_update_warning</span>
+<h3 class="font-headline-sm text-headline-sm text-primary uppercase font-bold tracking-wide">
+            Log Peristiwa &amp; Pertahanan Siber Terkini
+          </h3>
+</div>
+<span class="font-telemetry-sm text-telemetry-sm text-on-surface-variant font-mono">STREAM: LIVE / WITA</span>
+</div>
+<!-- Data Table Stream -->
+<div class="flex flex-col divide-y divide-surface-container-high overflow-x-auto">
+<!-- Event 1 -->
+<div class="py-space-sm flex items-center justify-between gap-space-md hover:bg-surface-container transition-colors px-space-xs">
+<div class="flex items-center gap-space-md">
+<span class="w-2 h-2 rounded-full bg-primary-container flex-shrink-0"></span>
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs">
+<span class="font-telemetry-md text-telemetry-md text-primary font-semibold">SYN-FLOOD MITIGATION</span>
+<span class="font-classification-stamp text-classification-stamp px-space-xs py-space-2xs bg-secondary-container text-on-secondary-container">BLOCKED</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Firewall perimeter Kodam XIV menetralisir anomali 12.4K pps menuju gateway Korem 141/Toddopuli.</span>
+</div>
+</div>
+<div class="flex flex-col items-end flex-shrink-0 font-telemetry-sm text-telemetry-sm text-on-surface-variant">
+<span class="text-primary font-mono">12:27:40 WITA</span>
+<span class="text-secondary font-mono">SEC-DROP</span>
+</div>
+</div>
+<!-- Event 2 -->
+<div class="py-space-sm flex items-center justify-between gap-space-md hover:bg-surface-container transition-colors px-space-xs">
+<div class="flex items-center gap-space-md">
+<span class="w-2 h-2 rounded-full bg-secondary flex-shrink-0"></span>
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs">
+<span class="font-telemetry-md text-telemetry-md text-on-surface font-semibold">TELEGRAM SANDI TERKIRIM</span>
+<span class="font-classification-stamp text-classification-stamp px-space-xs py-space-2xs bg-surface-container-high text-secondary">ENCRYPTED</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Transmisi kawat sandi resmi Pangdam XIV kepada jajaran Danrem 142/Tatag terverifikasi.</span>
+</div>
+</div>
+<div class="flex flex-col items-end flex-shrink-0 font-telemetry-sm text-telemetry-sm text-on-surface-variant">
+<span class="text-primary font-mono">12:22:15 WITA</span>
+<span class="text-secondary font-mono">ACK 200</span>
+</div>
+</div>
+<!-- Event 3 -->
+<div class="py-space-sm flex items-center justify-between gap-space-md hover:bg-surface-container transition-colors px-space-xs">
+<div class="flex items-center gap-space-md">
+<span class="w-2 h-2 rounded-full bg-tertiary-fixed-dim flex-shrink-0"></span>
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs">
+<span class="font-telemetry-md text-telemetry-md text-tertiary-fixed-dim font-semibold">RECONNAISSANCE PORT SCAN</span>
+<span class="font-classification-stamp text-classification-stamp px-space-xs py-space-2xs bg-tertiary-container text-on-tertiary-container">LOGGED</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Deteksi pemindaian port 22/443 tak dikenal dari IP eksternal 185.220.101.44 (Tolak otomatis).</span>
+</div>
+</div>
+<div class="flex flex-col items-end flex-shrink-0 font-telemetry-sm text-telemetry-sm text-on-surface-variant">
+<span class="text-primary font-mono">12:15:08 WITA</span>
+<span class="text-tertiary-fixed-dim font-mono">HONEYPOT</span>
+</div>
+</div>
+<!-- Event 4 -->
+<div class="py-space-sm flex items-center justify-between gap-space-md hover:bg-surface-container transition-colors px-space-xs">
+<div class="flex items-center gap-space-md">
+<span class="w-2 h-2 rounded-full bg-primary-container flex-shrink-0"></span>
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs">
+<span class="font-telemetry-md text-telemetry-md text-primary font-semibold">ROTASI INTEGRITAS SERTIFIKAT SSL/TLS</span>
+<span class="font-classification-stamp text-classification-stamp px-space-xs py-space-2xs bg-secondary-container text-on-secondary-container">SUCCESS</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Pembaharuan sertifikat root intranet militer Kodam Hasanuddin – SHA384/ECDSA.</span>
+</div>
+</div>
+<div class="flex flex-col items-end flex-shrink-0 font-telemetry-sm text-telemetry-sm text-on-surface-variant">
+<span class="text-primary font-mono">11:58:30 WITA</span>
+<span class="text-secondary font-mono">ROOT_OK</span>
+</div>
+</div>
+</div>
+<!-- Quick Command Console Prompt -->
+<div class="mt-space-sm p-space-sm bg-surface-container-lowest flex items-center gap-space-sm font-mono text-[13px]">
+<span class="text-primary-container font-bold">[SND-XIV]:~$</span>
+<input class="bg-transparent text-primary outline-none flex-1 font-mono text-[13px] placeholder-on-surface-variant/50" id="quickTerminal" onkeydown="handleTerminalCommand(event)" placeholder="Ketik perintah taktis (misal: 'status-link', 'cek-pos', 'clear')..." type="text"/>
+<span class="text-on-surface-variant text-[11px]">ENTER UTK EKSEKUSI</span>
+</div>
+<div class="hidden px-space-sm py-space-xs bg-surface-container font-mono text-[12px] text-primary-fixed-dim" id="terminalFeedback"></div>
+</div>
+</div>
+<!-- Regional Map / Tactical Node Distribution Section -->
+<div class="px-space-xl py-space-xl bg-surface-container-lowest flex flex-col gap-space-lg">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-md">
+<div class="flex flex-col gap-space-2xs">
+<span class="font-classification-stamp text-classification-stamp text-primary-container font-bold">SEKTOR GEOGRAFIS PERTAHANAN SIBER</span>
+<h3 class="font-headline-md text-headline-md text-primary font-bold uppercase">
+          Sebaran Pos Komunikasi Sandi Wilayah Kodam XIV/Hasanuddin
+        </h3>
+</div>
+<div class="flex items-center gap-space-sm">
+<span class="font-telemetry-sm text-telemetry-sm text-on-surface-variant">KORELASI WILAYAH:</span>
+<span class="font-telemetry-sm text-telemetry-sm px-space-xs py-space-2xs bg-surface-container text-secondary font-mono">SULSEL • SULBAR • SULTRA</span>
+</div>
+</div>
+<!-- Map & Node Status Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg">
+<div class="lg:col-span-8 h-80 bg-surface-container flex flex-col justify-between p-space-lg relative overflow-hidden shadow-md" data-location="Makassar, South Sulawesi, Indonesia" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBlJ0aHpnsz1LMqHTsJiObVKET7dMOkAhz0GUNaG5Vp6UcQW-LicRdb-fQCv0wjyTCUbW1kfFK_LUYRibpnXW7VmwWb9OBGZfZ1Pk57Hsp42EEKcxEo18k31ejpT1_lGtb2ZsDmolwIOvrxB8jfwDYjLszq46W3PZtaBOxnzqfIgrnwzP_R9UXcbSoMKwaSq7X0-LhVhjxNoilgJHlbrVtvJCVMUPyfgfiIbkDiqN9CiIL49tMc4avwmA'); background-size: cover; background-position: center;">
+<div class="absolute inset-0 bg-gradient-to-t from-background via-background/80 to-transparent"></div>
+<div class="relative z-10 flex items-center justify-between">
+<div class="px-space-sm py-space-2xs bg-surface-container-lowest/90 backdrop-blur-sm flex items-center gap-space-xs">
+<span class="w-2 h-2 rounded-full bg-primary-container animate-pulse"></span>
+<span class="font-telemetry-sm text-telemetry-sm text-primary font-bold font-mono">HQ PUSAT: MAKASSAR [KODAM XIV]</span>
+</div>
+<span class="font-classification-stamp text-classification-stamp px-space-xs py-space-2xs bg-secondary-container text-on-secondary-container">GPS LOCK: -5.1477, 119.4327</span>
+</div>
+<div class="relative z-10 flex flex-wrap items-center gap-space-md">
+<div class="px-space-md py-space-xs bg-surface-container-lowest/90 backdrop-blur-sm flex flex-col">
+<span class="font-classification-stamp text-classification-stamp text-on-surface-variant">TRANSMITER DAYA</span>
+<span class="font-telemetry-md text-telemetry-md text-primary font-mono font-bold">500W PEP HF</span>
+</div>
+<div class="px-space-md py-space-xs bg-surface-container-lowest/90 backdrop-blur-sm flex flex-col">
+<span class="font-classification-stamp text-classification-stamp text-on-surface-variant">KU-BAND SATELIT</span>
+<span class="font-telemetry-md text-telemetry-md text-secondary font-mono font-bold">LOCKED • 98%</span>
+</div>
+<div class="px-space-md py-space-xs bg-surface-container-lowest/90 backdrop-blur-sm flex flex-col">
+<span class="font-classification-stamp text-classification-stamp text-on-surface-variant">SUBNET SANDI</span>
+<span class="font-telemetry-md text-telemetry-md text-primary-fixed-dim font-mono font-bold">10.14.0.0/16</span>
+</div>
+</div>
+</div>
+<div class="lg:col-span-4 flex flex-col justify-between gap-space-sm bg-surface-container-low p-space-md">
+<span class="font-classification-stamp text-classification-stamp text-on-surface-variant font-bold">STATUS POS KOORDINASI UTAMA</span>
+<div class="flex flex-col gap-space-xs">
+<!-- Pos 1 -->
+<div class="p-space-sm bg-surface-container flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-telemetry-md text-telemetry-md text-on-surface font-semibold">Korem 141/Toddopuli (Bone)</span>
+<span class="font-telemetry-sm text-telemetry-sm text-on-surface-variant">Kanal VHF + Microwave Relay</span>
+</div>
+<span class="px-space-xs py-space-2xs bg-secondary-container text-primary font-telemetry-sm text-telemetry-sm font-bold">ONLINE</span>
+</div>
+<!-- Pos 2 -->
+<div class="p-space-sm bg-surface-container flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-telemetry-md text-telemetry-md text-on-surface font-semibold">Korem 142/Tatag (Mamuju)</span>
+<span class="font-telemetry-sm text-telemetry-sm text-on-surface-variant">Kanal Satelit VSAT Militer</span>
+</div>
+<span class="px-space-xs py-space-2xs bg-secondary-container text-primary font-telemetry-sm text-telemetry-sm font-bold">ONLINE</span>
+</div>
+<!-- Pos 3 -->
+<div class="p-space-sm bg-surface-container flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-telemetry-md text-telemetry-md text-on-surface font-semibold">Korem 143/Halu Oleo (Kendari)</span>
+<span class="font-telemetry-sm text-telemetry-sm text-on-surface-variant">Fiber Optik Intranet + Radio HF</span>
+</div>
+<span class="px-space-xs py-space-2xs bg-secondary-container text-primary font-telemetry-sm text-telemetry-sm font-bold">ONLINE</span>
+</div>
+<!-- Pos 4 -->
+<div class="p-space-sm bg-surface-container flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-telemetry-md text-telemetry-md text-on-surface font-semibold">Kodim 1408/Makassar (BS)</span>
+<span class="font-telemetry-sm text-telemetry-sm text-on-surface-variant">Dedicated Tactical Link</span>
+</div>
+<span class="px-space-xs py-space-2xs bg-secondary-container text-primary font-telemetry-sm text-telemetry-sm font-bold">ONLINE</span>
+</div>
+</div>
+<div class="pt-space-xs flex items-center justify-between text-on-surface-variant font-telemetry-sm text-telemetry-sm">
+<span>Kesiagaan Perangkat Kripto:</span>
+<span class="text-primary font-bold">100% SIAP OPERASI</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Standard Operating Procedures / Dokumen Sandi Cepat -->
+<div class="px-space-xl py-space-xl bg-surface flex flex-col gap-space-lg shadow-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="w-3 h-3 bg-secondary"></span>
+<h3 class="font-headline-md text-headline-md text-primary font-bold uppercase">
+          Dokumen Sandi &amp; Protokol Tanggap Darurat Insiden Siber (CSIRT)
+        </h3>
+</div>
+<span class="font-classification-stamp text-classification-stamp px-space-xs py-space-2xs bg-secondary-container text-on-secondary-container uppercase">
+        SOP-SND-XIV-REV3
+      </span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
+<div class="p-space-md bg-surface-container-low flex flex-col justify-between gap-space-md">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-xs text-primary">
+<span class="material-symbols-outlined text-[20px]">assignment</span>
+<span class="font-headline-sm text-headline-sm font-semibold">SOP Penanganan Insiden Deface/DDoS</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Langkah isolasi segmen server, pengalihan DNS Anycast darurat, dan koordinasi cepat dengan Tim Tanggap Siber Mabesad.
+          </p>
+</div>
+<button class="w-full py-space-xs bg-surface-container hover:bg-secondary-container text-on-surface hover:text-on-secondary-container transition-all font-telemetry-sm text-telemetry-sm uppercase font-bold flex items-center justify-center gap-space-xs" onclick="triggerDownloadFeedback('SOP-INSIDEN-DEFACE-KODAM14.pdf')">
+<span class="material-symbols-outlined text-[16px]">download</span> Unduh Dokumen
+        </button>
+</div>
+<div class="p-space-md bg-surface-container-low flex flex-col justify-between gap-space-md">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-xs text-primary">
+<span class="material-symbols-outlined text-[20px]">key_vertical</span>
+<span class="font-headline-sm text-headline-sm font-semibold">Manual Distribusi Kunci Sandi Bulanan</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Mekanisme penyerahan one-time pad (OTP) fisik dan digital kepada Perwira Sandi Kodim dan Batalyon terdepan.
+          </p>
+</div>
+<button class="w-full py-space-xs bg-surface-container hover:bg-secondary-container text-on-surface hover:text-on-secondary-container transition-all font-telemetry-sm text-telemetry-sm uppercase font-bold flex items-center justify-center gap-space-xs" onclick="triggerDownloadFeedback('MANUAL-DISTRIBUSI-KUNCI-2025.pdf')">
+<span class="material-symbols-outlined text-[16px]">download</span> Unduh Dokumen
+        </button>
+</div>
+<div class="p-space-md bg-surface-container-low flex flex-col justify-between gap-space-md">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-xs text-primary">
+<span class="material-symbols-outlined text-[20px]">contact_phone</span>
+<span class="font-headline-sm text-headline-sm font-semibold">Direktori Kontak Cepat Siaga Sandi</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Daftar frekuensi cadangan, nomor hotline satelit darurat, dan kanal radio taktis antar-matra di Makassar.
+          </p>
+</div>
+<button class="w-full py-space-xs bg-surface-container hover:bg-secondary-container text-on-surface hover:text-on-secondary-container transition-all font-telemetry-sm text-telemetry-sm uppercase font-bold flex items-center justify-center gap-space-xs" onclick="triggerDownloadFeedback('DIREKTORI-SIAGA-SANDI-XIV.pdf')">
+<span class="material-symbols-outlined text-[16px]">download</span> Unduh Dokumen
+        </button>
+</div>
+</div>
+</div>
+<!-- Operational Footer Bar -->
+<div class="px-space-xl py-space-md bg-surface-container-lowest flex flex-col sm:flex-row items-center justify-between gap-space-md text-on-surface-variant font-telemetry-sm text-telemetry-sm">
+<div class="flex items-center gap-space-md">
+<span class="text-primary font-mono font-semibold">SANSIDAM XIV/HASANUDDIN</span>
+<span>•</span>
+<span>Jl. Urip Sumoharjo KM 7, Makassar, Sulawesi Selatan</span>
+</div>
+<div class="flex items-center gap-space-md">
+<span class="text-secondary font-mono">MIL-ID: 7300-KODAM14-CYBER-OPS</span>
+<span class="px-space-xs py-space-2xs bg-surface-container text-primary font-mono">REV. JAN-2025</span>
+</div>
+</div>
+</div>
+<script>
+  // Copy to clipboard helper
+  function copyToClipboard(text, btnElement) {
+    navigator.clipboard.writeText(text).then(() => {
+      const originalHtml = btnElement.innerHTML;
+      btnElement.innerHTML = '<span class="material-symbols-outlined text-[14px]">check</span><span>Tersalin</span>';
+      btnElement.classList.remove('bg-secondary-container', 'text-on-secondary-container');
+      btnElement.classList.add('bg-primary-container', 'text-on-primary-container');
+      
+      setTimeout(() => {
+        btnElement.innerHTML = originalHtml;
+        btnElement.classList.add('bg-secondary-container', 'text-on-secondary-container');
+        btnElement.classList.remove('bg-primary-container', 'text-on-primary-container');
+      }, 2000);
+    }).catch(err => {
+      alert('Kredensial: ' + text);
+    });
+  }
+
+  // Toggle Password Masking
+  function togglePasswordVisibility() {
+    const masked = document.getElementById('maskedPass');
+    const unmasked = document.getElementById('unmaskedPass');
+    const eye = document.getElementById('eyeIcon');
+
+    if (unmasked.classList.contains('hidden')) {
+      unmasked.classList.remove('hidden');
+      masked.classList.add('hidden');
+      eye.textContent = 'visibility_off';
+    } else {
+      unmasked.classList.add('hidden');
+      masked.classList.remove('hidden');
+      eye.textContent = 'visibility';
+    }
+  }
+
+  // Live Embed Viewer Controls
+  function toggleEmbedModal(url, title) {
+    const container = document.getElementById('liveViewerContainer');
+    const frame = document.getElementById('lookerFrame');
+    const activeTitle = document.getElementById('activeViewerTitle');
+    const activeLink = document.getElementById('activeExternalLink');
+
+    activeTitle.textContent = 'KONSOL TERPADU // ' + title.toUpperCase();
+    frame.src = url;
+    activeLink.href = url;
+    container.classList.remove('hidden');
+
+    container.scrollIntoView({ behavior: 'smooth' });
+  }
+
+  function closeEmbedModal() {
+    const container = document.getElementById('liveViewerContainer');
+    const frame = document.getElementById('lookerFrame');
+    frame.src = '';
+    container.classList.add('hidden');
+  }
+
+  // Terminal Simulator
+  function handleTerminalCommand(e) {
+    if (e.key === 'Enter') {
+      const input = document.getElementById('quickTerminal');
+      const feedback = document.getElementById('terminalFeedback');
+      const cmd = input.value.trim().toLowerCase();
+
+      feedback.classList.remove('hidden');
+      if (cmd === 'status-link') {
+        feedback.textContent = '[RESPONS-SND]: Sinyal 24 Pos Komando Hasanuddin 100% tersinkronisasi via enkripsi GCM.';
+      } else if (cmd === 'cek-pos') {
+        feedback.textContent = '[RESPONS-SND]: Makassar: ACTIVE (HQ) | Gowa: OK | Bone: OK | Kendari: OK | Mamuju: OK | Palopo: OK.';
+      } else if (cmd === 'clear') {
+        feedback.classList.add('hidden');
+        feedback.textContent = '';
+      } else if (cmd === 'help') {
+        feedback.textContent = '[DAFTAR PERINTAH]: status-link, cek-pos, clear, defcon, rotasi';
+      } else {
+        feedback.textContent = `[RESPONS-SND]: Perintah '${cmd}' diterima dan diteruskan ke log audit Sandidam XIV.`;
+      }
+      input.value = '';
+    }
+  }
+
+  // Signal Refresh Simulator
+  function simulateSignalRefresh() {
+    const toast = document.createElement('div');
+    toast.className = 'fixed bottom-6 right-6 z-50 bg-secondary-container text-on-secondary-container px-space-lg py-space-sm shadow-lg flex items-center gap-space-sm font-mono text-[13px]';
+    toast.innerHTML = '<span class="material-symbols-outlined text-[18px]">cloud_sync</span> Sinkronisasi Sinyal Sandi Selesai (24 Node Terverifikasi)';
+    document.body.appendChild(toast);
+    setTimeout(() => toast.remove(), 3500);
+  }
+
+  // Emergency Contingency Notice
+  function emergencyAlertModal() {
+    alert("PROTOKOL KONTINJENSI SIBER MILITER SANSIDAM XIV:\n\nDalam keadaan darurat ancaman siber Tingkat 1 (DEFCON 1), lakukan pemutusan gateway internet publik dan aktifkan jaringan satelit sandi otonom (Dark-Net TNI AD). Hubungi Perwira Siaga Sandi di EXT 1401.");
+  }
+
+  function triggerDownloadFeedback(docName) {
+    alert("Mengunduh dokumen sandi militer terotentikasi: " + docName + "\nKlasifikasi: RAHASIA NEGARA. Harap simpan di media penyimpanan terenkripsi.");
+  }
+
+  function rotateLocalCredentials() {
+    alert("Permintaan rotasi tiket kredensial telah dikirimkan ke Peladen Kriptografi Sansidam XIV. Tiket otorisasi baru akan dikirimkan melalui kawat telegram sandi.");
+  }
+</script></main></div></body></html>
