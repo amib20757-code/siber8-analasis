@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600&amp;family=JetBrains+Mono:wght@400;500;600&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {
+  darkMode: "class",
+  theme: {
+    extend: {
+      "colors": {
+        "primary-container": "#00f0ff",
+        "on-background": "#dfe2f1",
+        "outline-variant": "#3b494b",
+        "inverse-surface": "#dfe2f1",
+        "on-secondary": "#003919",
+        "error": "#ffb4ab",
+        "on-tertiary": "#4e0078",
+        "surface-dim": "#0f131d",
+        "on-tertiary-fixed-variant": "#7000a8",
+        "on-primary-container": "#006970",
+        "secondary-fixed": "#60ff99",
+        "surface-container-low": "#171b26",
+        "secondary-fixed-dim": "#00e479",
+        "on-secondary-container": "#007239",
+        "on-tertiary-container": "#9300dc",
+        "surface-container-lowest": "#0a0e18",
+        "on-secondary-fixed-variant": "#005228",
+        "on-surface": "#dfe2f1",
+        "inverse-primary": "#006970",
+        "surface-tint": "#00dbe9",
+        "tertiary-fixed-dim": "#e5b5ff",
+        "background": "#0f131d",
+        "surface-variant": "#313540",
+        "on-surface-variant": "#b9cacb",
+        "secondary": "#f5fff3",
+        "surface-container-high": "#262a35",
+        "primary-fixed-dim": "#00dbe9",
+        "surface-container-highest": "#313540",
+        "error-container": "#93000a",
+        "on-primary-fixed": "#002022",
+        "outline": "#849495",
+        "on-error-container": "#ffdad6",
+        "on-secondary-fixed": "#00210c",
+        "tertiary": "#fff2ff",
+        "tertiary-fixed": "#f4d9ff",
+        "secondary-container": "#34ff8d",
+        "on-error": "#690005",
+        "on-primary": "#00363a",
+        "primary-fixed": "#7df4ff",
+        "surface-container": "#1c1f2a",
+        "primary": "#dbfcff",
+        "on-primary-fixed-variant": "#004f54",
+        "on-tertiary-fixed": "#30004b",
+        "surface-bright": "#353944",
+        "inverse-on-surface": "#2c303b",
+        "tertiary-container": "#efceff",
+        "surface": "#0f131d"
+      },
+      "borderRadius": {
+        "DEFAULT": "0.125rem",
+        "lg": "0.25rem",
+        "xl": "0.5rem",
+        "full": "0.75rem"
+      },
+      "spacing": {
+        "sm": "0.75rem",
+        "md": "1rem",
+        "2xl": "3rem",
+        "viewport-max": "1440px",
+        "atom": "0.25rem",
+        "3xl": "4rem",
+        "xs": "0.5rem",
+        "gutter-mobile": "1rem",
+        "sub-atom": "0.125rem",
+        "lg": "1.5rem",
+        "gutter-desktop": "2rem",
+        "xl": "2rem"
+      },
+      "fontFamily": {
+        "headline-md": [
+          "Space Grotesk"
+        ],
+        "headline-lg": [
+          "Space Grotesk"
+        ],
+        "body-sm": [
+          "Geist"
+        ],
+        "label-code": [
+          "JetBrains Mono"
+        ],
+        "label-caps": [
+          "JetBrains Mono"
+        ],
+        "body-lg": [
+          "Geist"
+        ],
+        "label-micro": [
+          "JetBrains Mono"
+        ],
+        "headline-lg-mobile": [
+          "Space Grotesk"
+        ],
+        "headline-sm": [
+          "Space Grotesk"
+        ],
+        "display-xl-mobile": [
+          "Space Grotesk"
+        ],
+        "body-md": [
+          "Geist"
+        ],
+        "display-xl": [
+          "Space Grotesk"
+        ]
+      },
+      "fontSize": {
+        "headline-md": [
+          "28px",
+          {
+            "lineHeight": "36px",
+            "letterSpacing": "-0.01em",
+            "fontWeight": "600"
+          }
+        ],
+        "headline-lg": [
+          "40px",
+          {
+            "lineHeight": "48px",
+            "letterSpacing": "-0.015em",
+            "fontWeight": "600"
+          }
+        ],
+        "body-sm": [
+          "13px",
+          {
+            "lineHeight": "20px",
+            "letterSpacing": "0.01em",
+            "fontWeight": "400"
+          }
+        ],
+        "label-code": [
+          "14px",
+          {
+            "lineHeight": "20px",
+            "letterSpacing": "0em",
+            "fontWeight": "500"
+          }
+        ],
+        "label-caps": [
+          "11px",
+          {
+            "lineHeight": "16px",
+            "letterSpacing": "0.14em",
+            "fontWeight": "600"
+          }
+        ],
+        "body-lg": [
+          "18px",
+          {
+            "lineHeight": "28px",
+            "letterSpacing": "0em",
+            "fontWeight": "400"
+          }
+        ],
+        "label-micro": [
+          "10px",
+          {
+            "lineHeight": "14px",
+            "letterSpacing": "0.08em",
+            "fontWeight": "400"
+          }
+        ],
+        "headline-lg-mobile": [
+          "28px",
+          {
+            "lineHeight": "36px",
+            "letterSpacing": "0em",
+            "fontWeight": "600"
+          }
+        ],
+        "headline-sm": [
+          "20px",
+          {
+            "lineHeight": "28px",
+            "letterSpacing": "0em",
+            "fontWeight": "500"
+          }
+        ],
+        "display-xl-mobile": [
+          "36px",
+          {
+            "lineHeight": "44px",
+            "letterSpacing": "-0.01em",
+            "fontWeight": "700"
+          }
+        ],
+        "body-md": [
+          "15px",
+          {
+            "lineHeight": "24px",
+            "letterSpacing": "0em",
+            "fontWeight": "400"
+          }
+        ],
+        "display-xl": [
+          "56px",
+          {
+            "lineHeight": "64px",
+            "letterSpacing": "-0.02em",
+            "fontWeight": "700"
+          }
+        ]
+      }
+    }
+  }
+};</script></head><body class="bg-background font-body-md text-on-surface antialiased selection:bg-primary-container selection:text-on-primary-container"><header class="fixed top-0 w-full z-50 bg-surface-container-lowest/85 backdrop-blur-xl border-b border-primary-container/20 shadow-[0_4px_30px_rgba(0,240,255,0.08)]"><div class="h-20 max-w-viewport-max mx-auto px-gutter-desktop flex items-center justify-between gap-md"><div class="flex items-center gap-md"><img alt="Cyber Web Structure Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1WUq7vYMAs-IPiqNYECUnDXWhzJUMOjNdeY7d3hH9lwA_NWxmTCNWIh5TxYNVeyFukZ8DmadLjDjMLTmq2r7vHOCE4sDGyYlLR4nCKCrHNFVeHdh1qa5UwVWcun2YaoNwydDZc4b_FMhUWeM7nuhB-D-Gqk3E4bN-hnx-eXwrmCO7h3NLfSj6U_W-F0XoA15aiifmungZxrmSSBkuFIwZJo968Xkf0m1gWNhK6PehSyjTkZ1Zzb00XXyDE"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-primary uppercase tracking-tight">CYBER_DEV // ARCH</span><span class="font-label-micro text-label-micro text-on-surface-variant uppercase tracking-widest">SYSTEMS TELEMETRY HUD</span></div><div class="hidden xl:flex items-center gap-xs ml-lg pl-lg border-l border-outline-variant/40"><div class="flex items-center gap-xs px-xs py-sub-atom rounded bg-surface-container-low border border-secondary-container/30"><span class="w-1.5 h-1.5 rounded-full bg-secondary-container animate-pulse"></span><span class="font-label-caps text-label-caps text-secondary-container">STATUS: ONLINE</span></div><span class="font-label-micro text-label-micro text-on-surface-variant px-xs py-sub-atom rounded bg-surface-container-low border border-outline-variant/30">SYS_VER 4.2.0</span><span class="font-label-micro text-label-micro text-primary-container px-xs py-sub-atom rounded bg-surface-container-low border border-primary-container/30">LATENCY: 12ms</span></div></div><nav class="flex items-center gap-xs p-sub-atom rounded bg-surface-container-low/80 border border-outline-variant/30" data-active-classes="bg-primary-container text-on-primary-container border-primary-container shadow-[0_0_15px_rgba(0,240,255,0.35)]"><a aria-current="page" class="font-label-code uppercase px-md py-xs rounded transition-all bg-primary-container text-on-primary-container border-primary-container shadow-[0_0_15px_rgba(0,240,255,0.35)]" data-path="list-protocol" href="#">01. List Protocol</a><a class="font-label-code text-label-code uppercase px-md py-xs rounded border border-transparent text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="layout-architecture" href="#">02. Layout Architecture</a><a class="font-label-code text-label-code uppercase px-md py-xs rounded border border-transparent text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="matrix-synthesis" href="#">03. Matrix Synthesis</a></nav><div class="flex items-center gap-md"><div class="hidden md:flex flex-col items-end"><span class="font-label-caps text-label-caps text-primary-fixed">PORTAL_NODE: 0x8F04</span><span class="font-label-micro text-label-micro text-secondary-fixed-dim">BUFFER: SYNCHRONIZED</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shadow-[0_0_12px_rgba(0,240,255,0.4)]"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-20 bg-background min-h-screen"><div class="flex flex-col w-full">
+<!-- Subtle Spatial Cyber Grid Backdrop -->
+<div class="relative w-full overflow-hidden">
+<!-- Ambient Holographic Glow Flares -->
+<div class="pointer-events-none absolute -top-40 left-1/4 w-[500px] h-[500px] bg-primary-container/10 blur-[130px] rounded-full"></div>
+<div class="pointer-events-none absolute top-[40%] right-10 w-[450px] h-[450px] bg-secondary-container/10 blur-[140px] rounded-full"></div>
+<div class="pointer-events-none absolute bottom-10 left-1/3 w-[600px] h-[400px] bg-primary-container/5 blur-[160px] rounded-full"></div>
+<div class="max-w-viewport-max mx-auto px-gutter-mobile md:px-gutter-desktop py-xl flex flex-col gap-2xl relative z-10">
+<!-- ==========================================
+           0. TOP TELEMETRY & HERO HEADER
+           ========================================== -->
+<section class="flex flex-col gap-md pt-xs">
+<!-- Telemetry Meta Bar -->
+<div class="flex flex-wrap items-center justify-between gap-sm border-b border-outline-variant/30 pb-sm">
+<div class="flex items-center gap-xs">
+<span class="relative flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary-container opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-primary-container"></span>
+</span>
+<span class="font-label-caps text-label-caps text-primary uppercase tracking-widest">CYBER_DOCS // PROTOKOL WEB DEV 2025</span>
+</div>
+<div class="flex items-center gap-xs">
+<span class="font-label-micro text-label-micro text-on-surface-variant bg-surface-container-low px-xs py-sub-atom rounded border border-outline-variant/30">MODUL: 01-02</span>
+<span class="font-label-micro text-label-micro text-secondary-fixed-dim bg-surface-container-low px-xs py-sub-atom rounded border border-secondary-container/30">TERMINAL: ACTIVE</span>
+<span class="font-label-micro text-label-micro text-primary-container bg-surface-container-low px-xs py-sub-atom rounded border border-primary-container/30">LEVEL: ESSENTIAL</span>
+</div>
+</div>
+<!-- Hero Title Layout -->
+<div class="flex flex-col lg:flex-row lg:items-end justify-between gap-lg pt-xs">
+<div class="flex flex-col gap-xs max-w-3xl">
+<div class="flex items-center gap-xs text-primary-container">
+<span class="material-symbols-outlined text-[18px]">terminal</span>
+<span class="font-label-code text-label-code text-primary-container uppercase tracking-wider">STRUKTUR_KOMPONEN_DASAR</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-primary tracking-tight font-bold">
+              Fondasi Struktur Web: <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary-container via-secondary-container to-tertiary-fixed-dim">List &amp; Layout</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+              Eksplorasi representasi data terstruktur dan arsitektur tata letak visual dalam rekayasa antarmuka web modern.
+            </p>
+</div>
+<!-- Quick System Diagnostic Counter -->
+<div class="bg-surface-container-low/90 backdrop-blur-md border border-primary-container/20 p-md rounded-lg flex items-center gap-lg self-start lg:self-auto shadow-[0_0_20px_rgba(0,240,255,0.05)]">
+<div class="flex flex-col">
+<span class="font-label-micro text-label-micro text-outline uppercase tracking-wider">DOM NODES STATUS</span>
+<span class="font-headline-sm text-headline-sm text-secondary-fixed-dim font-bold">OPTIMIZED</span>
+</div>
+<div class="h-8 w-[1px] bg-outline-variant/40"></div>
+<div class="flex flex-col">
+<span class="font-label-micro text-label-micro text-outline uppercase tracking-wider">LAYOUT ENGINE</span>
+<span class="font-label-code text-label-code text-primary">CSS_FLEX_GRID</span>
+</div>
+</div>
+</div>
+</section>
+<!-- ==========================================
+           1. SECTION: MODULE "1. LIST"
+           ========================================== -->
+<section class="flex flex-col gap-lg">
+<!-- HUD Section Container -->
+<div class="relative bg-surface-container-low/75 backdrop-blur-xl border border-primary-container/40 rounded-xl p-lg md:p-xl shadow-[0_0_35px_rgba(0,240,255,0.08)] flex flex-col gap-lg">
+<!-- Cyber Corner Reticles -->
+<div class="absolute -top-1 -left-1 w-3 h-3 border-t-2 border-l-2 border-primary-container pointer-events-none"></div>
+<div class="absolute -top-1 -right-1 w-3 h-3 border-t-2 border-r-2 border-primary-container pointer-events-none"></div>
+<div class="absolute -bottom-1 -left-1 w-3 h-3 border-b-2 border-l-2 border-primary-container pointer-events-none"></div>
+<div class="absolute -bottom-1 -right-1 w-3 h-3 border-b-2 border-r-2 border-primary-container pointer-events-none"></div>
+<!-- Section Header Strip -->
+<div class="flex flex-wrap items-center justify-between gap-sm border-b border-primary-container/20 pb-md">
+<div class="flex items-center gap-sm">
+<div class="w-2.5 h-2.5 rounded-full bg-primary-container shadow-[0_0_8px_#00f0ff]"></div>
+<span class="font-label-caps text-label-caps text-primary-container tracking-widest uppercase">MODUL 01 // DATA_SEQUENCE</span>
+<span class="font-label-micro text-label-micro px-xs py-sub-atom rounded bg-primary-container/10 text-primary-container border border-primary-container/30">SYS_LIST_V1.0</span>
+</div>
+<div class="font-label-code text-label-code text-on-surface-variant flex items-center gap-xs">
+<span class="material-symbols-outlined text-[16px] text-primary-container">dns</span>
+              TAG: &lt;ul&gt; &lt;ol&gt; &lt;li&gt;
+            </div>
+</div>
+<!-- Content Split: Definition & Verbatim -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-xl">
+<!-- Left: Description & Narrative -->
+<div class="lg:col-span-5 flex flex-col justify-between gap-md">
+<div class="flex flex-col gap-sm">
+<div class="flex items-baseline gap-xs">
+<span class="font-label-caps text-label-caps text-primary-container">NODE.01</span>
+<h2 class="font-headline-lg text-headline-lg text-primary tracking-tight font-bold">1. List</h2>
+</div>
+<div class="p-md rounded bg-surface-container/80 border-l-2 border-primary-container text-on-surface">
+<p class="font-body-md text-body-md leading-relaxed text-on-surface">
+                    List adalah daftar kumpulan data atau informasi yang ditampilkan pada halaman web secara teratur. Contohnya seperti daftar produk, daftar berita, daftar pengguna, atau daftar tugas. List membantu pengguna melihat berbagai informasi dengan lebih mudah dan terstruktur.
+                  </p>
+</div>
+</div>
+<!-- List Protocol Metric Badges -->
+<div class="grid grid-cols-2 gap-sm pt-xs">
+<div class="p-xs bg-surface-container-high/40 rounded border border-outline-variant/30 flex flex-col">
+<span class="font-label-micro text-label-micro text-outline">ORDERED / SEQUENTIAL</span>
+<span class="font-label-code text-label-code text-primary-container font-semibold">&lt;ol&gt; Numeric / Alpha</span>
+</div>
+<div class="p-xs bg-surface-container-high/40 rounded border border-outline-variant/30 flex flex-col">
+<span class="font-label-micro text-label-micro text-outline">UNORDERED / SYMBOLIC</span>
+<span class="font-label-code text-label-code text-secondary-container font-semibold">&lt;ul&gt; Cyber Bullets</span>
+</div>
+</div>
+<!-- Action Controls -->
+<div class="flex flex-wrap items-center gap-xs">
+<button class="px-md py-xs rounded bg-primary-container/10 border border-primary-container text-primary-container hover:bg-primary-container hover:text-surface-dim font-label-code text-label-code uppercase transition-all duration-200 flex items-center gap-xs shadow-[0_0_15px_rgba(0,240,255,0.2)]" id="toggleCodeBtnList">
+<span class="material-symbols-outlined text-[16px]">code</span>
+                  Lihat Skrip HTML
+                </button>
+<button class="px-md py-xs rounded bg-surface-container-high border border-outline-variant/50 text-on-surface hover:border-secondary-container hover:text-secondary-fixed font-label-code text-label-code uppercase transition-all duration-200 flex items-center gap-xs" id="shuffleListBtn">
+<span class="material-symbols-outlined text-[16px]">sync</span>
+                  Jalankan Simulasi
+                </button>
+</div>
+</div>
+<!-- Right: Interactive Cyber List HUD Simulation -->
+<div class="lg:col-span-7 flex flex-col gap-sm">
+<div class="bg-surface-container-lowest/90 rounded-lg border border-primary-container/30 overflow-hidden shadow-xl">
+<!-- Terminal Titlebar -->
+<div class="bg-surface-container-high/60 px-md py-xs border-b border-outline-variant/30 flex items-center justify-between">
+<div class="flex items-center gap-xs">
+<span class="w-2.5 h-2.5 rounded-full bg-error inline-block"></span>
+<span class="w-2.5 h-2.5 rounded-full bg-primary-container/80 inline-block"></span>
+<span class="w-2.5 h-2.5 rounded-full bg-secondary-container inline-block"></span>
+<span class="font-label-code text-label-code text-on-surface-variant ml-xs">telemetry_feed_list.component</span>
+</div>
+<span class="font-label-micro text-label-micro text-primary-container uppercase tracking-wider">LIVE_FEED: 4 ENTITIES</span>
+</div>
+<!-- Structured Interactive List Elements -->
+<div class="p-md flex flex-col gap-xs" id="cyberDataList">
+<!-- Item 1: Produk -->
+<div class="group p-sm rounded bg-surface-container-low/60 hover:bg-surface-container border border-outline-variant/20 hover:border-primary-container/60 transition-all duration-200 flex flex-col md:flex-row md:items-center justify-between gap-xs">
+<div class="flex items-center gap-sm">
+<div class="w-7 h-7 rounded bg-primary-container/10 border border-primary-container/40 flex items-center justify-center text-primary-container font-label-code text-label-code">
+                        01
+                      </div>
+<div class="flex flex-col">
+<div class="flex items-center gap-xs">
+<span class="font-label-caps text-label-caps px-sub-atom py-0 rounded bg-primary-container/20 text-primary-container font-bold">PRODUK</span>
+<span class="font-body-md text-body-md text-primary font-semibold">Cyber Deck Neural Rig V3</span>
+</div>
+<span class="font-label-micro text-label-micro text-on-surface-variant">Katalog Inventaris Perangkat Keras Sektor-7</span>
+</div>
+</div>
+<div class="flex items-center gap-sm self-end md:self-auto">
+<span class="font-label-code text-label-code text-outline-variant text-[12px]">Stock: 4</span>
+<span class="font-label-code text-label-code text-secondary-fixed font-bold bg-surface-container-high px-xs py-sub-atom rounded border border-secondary-container/30">2,400 CRED</span>
+</div>
+</div>
+<!-- Item 2: Berita -->
+<div class="group p-sm rounded bg-surface-container-low/60 hover:bg-surface-container border border-outline-variant/20 hover:border-primary-container/60 transition-all duration-200 flex flex-col md:flex-row md:items-center justify-between gap-xs">
+<div class="flex items-center gap-sm">
+<div class="w-7 h-7 rounded bg-primary-container/10 border border-primary-container/40 flex items-center justify-center text-primary-container font-label-code text-label-code">
+                        02
+                      </div>
+<div class="flex flex-col">
+<div class="flex items-center gap-xs">
+<span class="font-label-caps text-label-caps px-sub-atom py-0 rounded bg-secondary-container/20 text-secondary-fixed font-bold">BERITA</span>
+<span class="font-body-md text-body-md text-primary font-semibold">Patch v4.2 Protokol Keamanan Jaringan Aktif</span>
+</div>
+<span class="font-label-micro text-label-micro text-on-surface-variant">Update Firmware Firewall &amp; Enkripsi Quantum DOM</span>
+</div>
+</div>
+<div class="flex items-center gap-sm self-end md:self-auto">
+<span class="font-label-caps text-label-caps text-primary-container bg-surface-container-high px-xs py-sub-atom rounded border border-primary-container/30">KAT: NetSec</span>
+</div>
+</div>
+<!-- Item 3: Pengguna -->
+<div class="group p-sm rounded bg-surface-container-low/60 hover:bg-surface-container border border-outline-variant/20 hover:border-primary-container/60 transition-all duration-200 flex flex-col md:flex-row md:items-center justify-between gap-xs">
+<div class="flex items-center gap-sm">
+<div class="w-7 h-7 rounded bg-primary-container/10 border border-primary-container/40 flex items-center justify-center text-primary-container font-label-code text-label-code">
+                        03
+                      </div>
+<div class="flex flex-col">
+<div class="flex items-center gap-xs">
+<span class="font-label-caps text-label-caps px-sub-atom py-0 rounded bg-tertiary-container/30 text-tertiary-fixed font-bold">PENGGUNA</span>
+<span class="font-body-md text-body-md text-primary font-semibold">@operator_zero</span>
+</div>
+<span class="font-label-micro text-label-micro text-on-surface-variant">Level 4 Grid Specialist &amp; DOM Architect</span>
+</div>
+</div>
+<div class="flex items-center gap-xs self-end md:self-auto">
+<span class="w-2 h-2 rounded-full bg-secondary-fixed-dim animate-pulse"></span>
+<span class="font-label-code text-label-code text-secondary-fixed font-semibold">ONLINE</span>
+</div>
+</div>
+<!-- Item 4: Tugas -->
+<div class="group p-sm rounded bg-surface-container-low/60 hover:bg-surface-container border border-outline-variant/20 hover:border-primary-container/60 transition-all duration-200 flex flex-col md:flex-row md:items-center justify-between gap-xs">
+<div class="flex items-center gap-sm">
+<div class="w-7 h-7 rounded bg-primary-container/10 border border-primary-container/40 flex items-center justify-center text-primary-container font-label-code text-label-code">
+                        04
+                      </div>
+<div class="flex flex-col">
+<div class="flex items-center gap-xs">
+<span class="font-label-caps text-label-caps px-sub-atom py-0 rounded bg-error-container/40 text-error font-bold">TUGAS</span>
+<span class="font-body-md text-body-md text-primary font-semibold">Optimasi Render Loop Node Pipeline</span>
+</div>
+<span class="font-label-micro text-label-micro text-on-surface-variant">Prioritas: Tinggi // Eksekusi CSS Paint Worklet</span>
+</div>
+</div>
+<div class="flex items-center gap-sm self-end md:self-auto min-w-[120px]">
+<div class="w-full bg-surface-container-high h-2 rounded-full overflow-hidden border border-outline-variant/30">
+<div class="bg-primary-container h-full w-[85%]"></div>
+</div>
+<span class="font-label-code text-label-code text-primary-container">85%</span>
+</div>
+</div>
+</div>
+<!-- Code Drawer for List (Toggleable via script) -->
+<div class="hidden border-t border-outline-variant/30 bg-surface-container-lowest p-md" id="codeDrawerList">
+<div class="flex items-center justify-between pb-xs text-outline">
+<span class="font-label-micro text-label-micro uppercase">HTML_SYNTAX_SOURCE</span>
+<button class="text-primary hover:text-primary-container font-label-micro text-label-micro flex items-center gap-sub-atom" id="copyListCode">
+<span class="material-symbols-outlined text-[14px]">content_copy</span> SALIN
+                    </button>
+</div>
+<pre class="font-label-code text-label-code text-on-surface-variant overflow-x-auto"><span class="text-primary-container">&lt;ul</span> <span class="text-secondary-fixed">class=</span><span class="text-tertiary-fixed-dim">"cyber-entity-list"</span><span class="text-primary-container">&gt;</span>
+  <span class="text-primary-container">&lt;li</span> <span class="text-secondary-fixed">data-type=</span><span class="text-tertiary-fixed-dim">"produk"</span><span class="text-primary-container">&gt;</span>Cyber Deck Neural Rig V3 - 2,400 CRED<span class="text-primary-container">&lt;/li&gt;</span>
+  <span class="text-primary-container">&lt;li</span> <span class="text-secondary-fixed">data-type=</span><span class="text-tertiary-fixed-dim">"berita"</span><span class="text-primary-container">&gt;</span>Patch v4.2 Protokol Keamanan Jaringan Aktif<span class="text-primary-container">&lt;/li&gt;</span>
+  <span class="text-primary-container">&lt;li</span> <span class="text-secondary-fixed">data-type=</span><span class="text-tertiary-fixed-dim">"pengguna"</span><span class="text-primary-container">&gt;</span>@operator_zero [Online]<span class="text-primary-container">&lt;/li&gt;</span>
+  <span class="text-primary-container">&lt;li</span> <span class="text-secondary-fixed">data-type=</span><span class="text-tertiary-fixed-dim">"tugas"</span><span class="text-primary-container">&gt;</span>Optimasi Render Loop Node Pipeline (85%)<span class="text-primary-container">&lt;/li&gt;</span>
+<span class="text-primary-container">&lt;/ul&gt;</span></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ==========================================
+           2. SECTION: MODULE "2. LAYOUT"
+           ========================================== -->
+<section class="flex flex-col gap-lg">
+<!-- HUD Section Container with Neon Green / Emerald Theme -->
+<div class="relative bg-surface-container-low/75 backdrop-blur-xl border border-secondary-container/40 rounded-xl p-lg md:p-xl shadow-[0_0_35px_rgba(52,255,141,0.08)] flex flex-col gap-lg">
+<!-- Cyber Corner Reticles -->
+<div class="absolute -top-1 -left-1 w-3 h-3 border-t-2 border-l-2 border-secondary-container pointer-events-none"></div>
+<div class="absolute -top-1 -right-1 w-3 h-3 border-t-2 border-r-2 border-secondary-container pointer-events-none"></div>
+<div class="absolute -bottom-1 -left-1 w-3 h-3 border-b-2 border-l-2 border-secondary-container pointer-events-none"></div>
+<div class="absolute -bottom-1 -right-1 w-3 h-3 border-b-2 border-r-2 border-secondary-container pointer-events-none"></div>
+<!-- Section Header Strip -->
+<div class="flex flex-wrap items-center justify-between gap-sm border-b border-secondary-container/20 pb-md">
+<div class="flex items-center gap-sm">
+<div class="w-2.5 h-2.5 rounded-full bg-secondary-container shadow-[0_0_8px_#34ff8d]"></div>
+<span class="font-label-caps text-label-caps text-secondary-fixed-dim tracking-widest uppercase">MODUL 02 // SPATIAL_ARCHITECTURE</span>
+<span class="font-label-micro text-label-micro px-xs py-sub-atom rounded bg-secondary-container/10 text-secondary-fixed-dim border border-secondary-container/30">SYS_LAYOUT_GRID</span>
+</div>
+<div class="font-label-code text-label-code text-on-surface-variant flex items-center gap-xs">
+<span class="material-symbols-outlined text-[16px] text-secondary-container">grid_view</span>
+              ENGINE: CSS Grid / Flexbox 2D Engine
+            </div>
+</div>
+<!-- Content Split: Definition & Verbatim -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-xl">
+<!-- Left: Description & Narrative -->
+<div class="lg:col-span-5 flex flex-col justify-between gap-md">
+<div class="flex flex-col gap-sm">
+<div class="flex items-baseline gap-xs">
+<span class="font-label-caps text-label-caps text-secondary-fixed-dim">NODE.02</span>
+<h2 class="font-headline-lg text-headline-lg text-primary tracking-tight font-bold">2. Layout</h2>
+</div>
+<div class="p-md rounded bg-surface-container/80 border-l-2 border-secondary-container text-on-surface">
+<p class="font-body-md text-body-md leading-relaxed text-on-surface">
+                    Layout adalah tata letak atau cara mengatur elemen-elemen yang ada pada halaman web. Layout mengatur posisi teks, gambar, tombol, menu, dan list agar halaman terlihat rapi, menarik, dan mudah digunakan.
+                  </p>
+</div>
+</div>
+<!-- Layout Mechanics Matrix -->
+<div class="flex flex-col gap-xs">
+<span class="font-label-caps text-label-caps text-outline uppercase tracking-wider">KOMPONEN TERATUR DALAM LAYOUT:</span>
+<div class="grid grid-cols-3 gap-xs">
+<div class="p-xs bg-surface-container rounded border border-outline-variant/20 flex flex-col items-center text-center">
+<span class="material-symbols-outlined text-[18px] text-primary-container">article</span>
+<span class="font-label-micro text-label-micro text-on-surface">Posisi Teks</span>
+</div>
+<div class="p-xs bg-surface-container rounded border border-outline-variant/20 flex flex-col items-center text-center">
+<span class="material-symbols-outlined text-[18px] text-secondary-container">image</span>
+<span class="font-label-micro text-label-micro text-on-surface">Gambar Visual</span>
+</div>
+<div class="p-xs bg-surface-container rounded border border-outline-variant/20 flex flex-col items-center text-center">
+<span class="material-symbols-outlined text-[18px] text-primary-fixed-dim">smart_button</span>
+<span class="font-label-micro text-label-micro text-on-surface">Tombol Action</span>
+</div>
+<div class="p-xs bg-surface-container rounded border border-outline-variant/20 flex flex-col items-center text-center">
+<span class="material-symbols-outlined text-[18px] text-tertiary-fixed-dim">menu</span>
+<span class="font-label-micro text-label-micro text-on-surface">Menu Navigasi</span>
+</div>
+<div class="p-xs bg-surface-container rounded border border-outline-variant/20 flex flex-col items-center text-center col-span-2">
+<span class="material-symbols-outlined text-[18px] text-secondary-fixed">format_list_bulleted</span>
+<span class="font-label-micro text-label-micro text-on-surface">List Tersemat (Struktur Data)</span>
+</div>
+</div>
+</div>
+<!-- Interactive Blueprint Switcher -->
+<div class="flex flex-wrap items-center gap-xs">
+<button class="px-md py-xs rounded bg-secondary-container/10 border border-secondary-container text-secondary-fixed-dim hover:bg-secondary-container hover:text-surface-dim font-label-code text-label-code uppercase transition-all duration-200 flex items-center gap-xs shadow-[0_0_15px_rgba(52,255,141,0.2)]" id="toggleWireframeBtn">
+<span class="material-symbols-outlined text-[16px]">layers</span>
+                  Ganti Mode Blueprint
+                </button>
+<div class="px-sm py-xs rounded bg-surface-container-high border border-outline-variant/30 text-on-surface-variant font-label-micro text-label-micro flex items-center gap-xs">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary-container"></span>
+                  RESPONSIVE_CANVAS: 12-COL
+                </div>
+</div>
+</div>
+<!-- Right: Interactive Visual Architecture Blueprint Diagram -->
+<div class="lg:col-span-7 flex flex-col gap-sm">
+<div class="bg-surface-container-lowest/90 rounded-lg border border-secondary-container/30 p-md flex flex-col gap-md relative shadow-xl">
+<!-- Blueprint Diagnostic Header -->
+<div class="flex items-center justify-between border-b border-outline-variant/30 pb-xs">
+<div class="flex items-center gap-xs">
+<span class="material-symbols-outlined text-[16px] text-secondary-container">architecture</span>
+<span class="font-label-code text-label-code text-secondary-fixed uppercase">SKEMA_ARSITEKTUR_TATA_LETAK</span>
+</div>
+<span class="font-label-micro text-label-micro text-outline">X: 1440px / Y: AUTO / FLEX: ENABLED</span>
+</div>
+<!-- Simulated Web Layout Canvas Blueprint -->
+<div class="p-sm rounded bg-surface-container-low/80 border border-outline-variant/30 flex flex-col gap-xs transition-all duration-300" id="blueprintContainer">
+<!-- Zone 1: Header / Navigasi -->
+<div class="p-xs rounded bg-surface-container-high/80 border border-primary-container/30 flex items-center justify-between">
+<div class="flex items-center gap-xs">
+<span class="px-xs py-sub-atom rounded bg-primary-container/20 text-primary-container font-label-micro text-label-micro font-bold">MENU &amp; NAVIGASI</span>
+<span class="font-label-code text-label-code text-primary hidden sm:inline">Portal // Beranda // Dokumentasi</span>
+</div>
+<div class="flex items-center gap-xs">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary-container"></span>
+<span class="font-label-micro text-label-micro text-secondary-fixed">Status: Online</span>
+</div>
+</div>
+<!-- Zone 2: Main Grid Split (Hero + Side Column) -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-xs">
+<!-- Left Hero & Content Block (8 cols) -->
+<div class="md:col-span-8 flex flex-col gap-xs">
+<!-- Hero Content with Teks & Tombol -->
+<div class="p-md rounded bg-surface-container border border-outline-variant/40 flex flex-col gap-xs relative overflow-hidden">
+<div class="flex items-center justify-between">
+<span class="font-label-caps text-label-caps text-primary-container bg-surface-container-lowest px-xs py-sub-atom rounded border border-primary-container/30">HERO_ZONE // POSISI TEKS</span>
+<span class="font-label-micro text-label-micro text-outline">Grid Item #1</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-primary font-bold">Judul Utama &amp; Narasi Halaman</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                          Menata posisi teks secara harmonis agar alur bacaan pengguna berurutan dari kiri-atas ke kanan-bawah.
+                        </p>
+<div class="pt-xs flex items-center gap-xs">
+<span class="px-sm py-xs rounded bg-primary-container text-on-primary-container font-label-caps text-label-caps font-bold shadow-[0_0_10px_rgba(0,240,255,0.4)]">
+                            TOMBOL UTAMA (CTA)
+                          </span>
+<span class="px-sm py-xs rounded bg-surface-container-highest text-on-surface font-label-caps text-label-caps border border-outline-variant/30">
+                            TOMBOL KEDUA
+                          </span>
+</div>
+</div>
+<!-- Sub Content with Gambar & List Tersemat -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-xs">
+<!-- Komponen Gambar -->
+<div class="p-sm rounded bg-surface-container-high/50 border border-secondary-container/30 flex flex-col gap-xs justify-between">
+<span class="font-label-caps text-label-caps text-secondary-fixed">KOMPONEN GAMBAR</span>
+<div class="h-20 bg-surface-container-lowest/80 rounded border border-outline-variant/20 flex flex-col items-center justify-center text-outline">
+<span class="material-symbols-outlined text-[28px] text-secondary-container">image</span>
+<span class="font-label-micro text-label-micro">Media Visual 16:9</span>
+</div>
+<span class="font-label-micro text-label-micro text-on-surface-variant">Proporsi teratur &amp; responsif</span>
+</div>
+<!-- Komponen List Tersemat -->
+<div class="p-sm rounded bg-surface-container-high/50 border border-primary-container/30 flex flex-col gap-xs justify-between">
+<span class="font-label-caps text-label-caps text-primary-container">LIST TERSEMAT</span>
+<div class="flex flex-col gap-sub-atom">
+<div class="flex items-center gap-xs text-[11px] font-label-code text-on-surface">
+<span class="text-primary-container">▹</span> Fitur Terpadu A
+                            </div>
+<div class="flex items-center gap-xs text-[11px] font-label-code text-on-surface">
+<span class="text-primary-container">▹</span> Sinkronisasi Real-time
+                            </div>
+<div class="flex items-center gap-xs text-[11px] font-label-code text-on-surface">
+<span class="text-primary-container">▹</span> Keamanan Enkripsi End-to-End
+                            </div>
+</div>
+<span class="font-label-micro text-label-micro text-outline">Data teratur di dalam kolom</span>
+</div>
+</div>
+</div>
+<!-- Right Side Widget (4 cols) -->
+<div class="md:col-span-4 p-sm rounded bg-surface-container-low border border-outline-variant/40 flex flex-col justify-between gap-sm">
+<div class="flex flex-col gap-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-caps text-label-caps text-tertiary-fixed-dim">SIDEBAR MENU</span>
+<span class="material-symbols-outlined text-[16px] text-tertiary-fixed-dim">view_sidebar</span>
+</div>
+<span class="font-label-micro text-label-micro text-on-surface-variant">Navigasi sekunder &amp; filter modul</span>
+<div class="flex flex-col gap-xs pt-xs">
+<div class="px-xs py-sub-atom rounded bg-surface-container text-[12px] font-label-code text-on-surface border-l-2 border-primary-container">
+                            # Konfigurasi Layar
+                          </div>
+<div class="px-xs py-sub-atom rounded bg-surface-container text-[12px] font-label-code text-on-surface-variant">
+                            # Parameter Grid
+                          </div>
+<div class="px-xs py-sub-atom rounded bg-surface-container text-[12px] font-label-code text-on-surface-variant">
+                            # Breakpoint Responsif
+                          </div>
+</div>
+</div>
+<div class="p-xs rounded bg-surface-container-lowest border border-outline-variant/30 text-center">
+<span class="font-label-micro text-label-micro text-secondary-fixed">ERGONOMI // VISUAL HARMONY</span>
+</div>
+</div>
+</div>
+<!-- Zone 3: Footer Bar -->
+<div class="p-xs rounded bg-surface-container-high/60 border border-outline-variant/30 flex items-center justify-between text-outline">
+<span class="font-label-micro text-label-micro">FOOTER_MODULE: © 2025 SISTEM TATA LETAK WEB</span>
+<span class="font-label-micro text-label-micro text-primary">STATUS_RENDER: 60 FPS</span>
+</div>
+</div>
+<!-- Interactive Blueprint Legend / Wireframe Metrics -->
+<div class="grid grid-cols-3 gap-xs pt-xs border-t border-outline-variant/20 font-label-micro text-label-micro text-on-surface-variant">
+<div class="flex items-center gap-xs">
+<span class="w-2 h-2 rounded bg-primary-container"></span>
+<span>Teks, Judul &amp; Tombol</span>
+</div>
+<div class="flex items-center gap-xs">
+<span class="w-2 h-2 rounded bg-secondary-container"></span>
+<span>Media Visual &amp; List</span>
+</div>
+<div class="flex items-center gap-xs">
+<span class="w-2 h-2 rounded bg-outline"></span>
+<span>Menu &amp; Penataan Ruang</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ==========================================
+           3. SECTION: KESIMPULAN SINGKAT (SYNTHESIS CARD)
+           ========================================== -->
+<section class="flex flex-col gap-md">
+<!-- Prominent Holographic Full-Width Card -->
+<div class="relative rounded-xl p-lg md:p-2xl bg-gradient-to-br from-surface-container-low via-surface-container to-surface-container-low border-2 border-primary-container/50 shadow-[0_0_50px_rgba(0,240,255,0.15)] overflow-hidden">
+<!-- Holographic Decorative Laser Beam Lines -->
+<div class="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-primary-container to-secondary-container"></div>
+<div class="absolute bottom-0 left-0 right-0 h-[2px] bg-gradient-to-r from-secondary-container via-primary-container to-transparent"></div>
+<div class="absolute -right-20 -bottom-20 w-80 h-80 bg-primary-container/10 rounded-full blur-3xl pointer-events-none"></div>
+<div class="flex flex-col gap-xl relative z-10">
+<!-- Header of Synthesis -->
+<div class="flex flex-wrap items-center justify-between gap-sm border-b border-outline-variant/30 pb-md">
+<div class="flex items-center gap-sm">
+<div class="p-xs rounded bg-primary-container/10 border border-primary-container/40 text-primary-container">
+<span class="material-symbols-outlined text-[22px]">memory</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-caps text-label-caps text-secondary-fixed tracking-widest uppercase">KEY_SYNTHESIS // KESIMPULAN INTI</span>
+<h3 class="font-headline-md text-headline-md text-primary font-bold">Kesimpulan Singkat</h3>
+</div>
+</div>
+<span class="font-label-caps text-label-caps text-primary-container px-sm py-xs rounded bg-surface-container-high border border-primary-container/40 uppercase">
+                AKURASI KONSEPTUAL: TINGKAT TINGGI
+              </span>
+</div>
+<!-- Prominent Verbatim Highlight Card -->
+<div class="p-lg rounded-lg bg-surface-container-lowest/90 border border-primary-container/40 shadow-[inset_0_0_20px_rgba(0,240,255,0.06)] flex flex-col gap-xs">
+<div class="flex items-center gap-xs text-primary-container">
+<span class="material-symbols-outlined text-[20px]">format_quote</span>
+<span class="font-label-code text-label-code uppercase tracking-wider text-primary">Prinsip Inti Arsitektur Web</span>
+</div>
+<p class="font-headline-sm text-headline-sm text-primary font-semibold leading-snug tracking-tight">
+                "List berfungsi untuk menampilkan kumpulan data, sedangkan layout berfungsi untuk mengatur bagaimana data dan elemen tersebut ditampilkan di halaman web."
+              </p>
+</div>
+<!-- Comparison Duality Matrix (Column A vs Column B) -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-lg">
+<!-- Column A: List (Penyaji Data) -->
+<div class="p-lg rounded-lg bg-surface-container/60 border border-primary-container/30 flex flex-col gap-sm relative">
+<div class="flex items-center justify-between border-b border-outline-variant/20 pb-xs">
+<div class="flex items-center gap-xs">
+<span class="material-symbols-outlined text-[18px] text-primary-container">data_object</span>
+<h4 class="font-headline-sm text-headline-sm text-primary font-bold">List (Penyaji Data)</h4>
+</div>
+<span class="font-label-caps text-label-caps text-primary-container bg-primary-container/10 px-xs py-sub-atom rounded">KONTEN</span>
+</div>
+<ul class="flex flex-col gap-xs font-body-md text-body-md text-on-surface-variant">
+<li class="flex items-start gap-xs">
+<span class="text-primary-container font-bold font-label-code">01.</span>
+<span><strong class="text-on-surface font-semibold">Fokus Utama:</strong> Menampilkan kumpulan entitas atau informasi secara terurut &amp; mudah dipindai oleh mata pengguna.</span>
+</li>
+<li class="flex items-start gap-xs">
+<span class="text-primary-container font-bold font-label-code">02.</span>
+<span><strong class="text-on-surface font-semibold">Bentuk Data:</strong> Produk e-commerce, baris berita, daftar akun pengguna, dan progres tugas.</span>
+</li>
+<li class="flex items-start gap-xs">
+<span class="text-primary-container font-bold font-label-code">03.</span>
+<span><strong class="text-on-surface font-semibold">Prinsip:</strong> Struktur semantik linier yang menjamin keterbacaan data mentah.</span>
+</li>
+</ul>
+</div>
+<!-- Column B: Layout (Arsitektur Ruang) -->
+<div class="p-lg rounded-lg bg-surface-container/60 border border-secondary-container/30 flex flex-col gap-sm relative">
+<div class="flex items-center justify-between border-b border-outline-variant/20 pb-xs">
+<div class="flex items-center gap-xs">
+<span class="material-symbols-outlined text-[18px] text-secondary-fixed">grid_goldenratio</span>
+<h4 class="font-headline-sm text-headline-sm text-primary font-bold">Layout (Arsitektur Ruang)</h4>
+</div>
+<span class="font-label-caps text-label-caps text-secondary-fixed-dim bg-secondary-container/10 px-xs py-sub-atom rounded">SPASIAL</span>
+</div>
+<ul class="flex flex-col gap-xs font-body-md text-body-md text-on-surface-variant">
+<li class="flex items-start gap-xs">
+<span class="text-secondary-fixed font-bold font-label-code">01.</span>
+<span><strong class="text-on-surface font-semibold">Fokus Utama:</strong> Menata posisi, hierarki ukuran, dan harmoni setiap elemen di kanvas web 2 dimensi.</span>
+</li>
+<li class="flex items-start gap-xs">
+<span class="text-secondary-fixed font-bold font-label-code">02.</span>
+<span><strong class="text-on-surface font-semibold">Cakupan Ruang:</strong> Alokasi Header, Kolom Konten, Sidebar, Tombol Aksi, Gambar, dan Penempatan List.</span>
+</li>
+<li class="flex items-start gap-xs">
+<span class="text-secondary-fixed font-bold font-label-code">03.</span>
+<span><strong class="text-on-surface font-semibold">Prinsip:</strong> Menjamin halaman rapi, estetis, responsif, dan mudah digunakan (ergonomis).</span>
+</li>
+</ul>
+</div>
+</div>
+<!-- Synthesis Formula Bar -->
+<div class="p-md rounded-lg bg-surface-container-lowest border border-outline-variant/30 flex flex-col md:flex-row items-center justify-between gap-md text-center md:text-left">
+<div class="flex flex-wrap items-center justify-center md:justify-start gap-xs font-label-code text-label-code">
+<span class="px-sm py-xs rounded bg-surface-container-high text-primary-container border border-primary-container/30 font-bold">[Data List]</span>
+<span class="text-on-surface font-bold text-headline-sm">+</span>
+<span class="px-sm py-xs rounded bg-surface-container-high text-secondary-fixed border border-secondary-container/30 font-bold">[Arsitektur Layout]</span>
+<span class="text-on-surface font-bold text-headline-sm">=</span>
+<span class="px-sm py-xs rounded bg-gradient-to-r from-primary-container/20 to-secondary-container/20 text-primary border border-primary-container/50 font-bold">
+                  Antarmuka Web yang Ergonomis &amp; Profesional
+                </span>
+</div>
+<div class="flex items-center gap-xs shrink-0">
+<span class="material-symbols-outlined text-[20px] text-secondary-container animate-pulse">verified</span>
+<span class="font-label-caps text-label-caps text-secondary-fixed">SINTESIS SELESAI</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+</div>
+<!-- Interactive JavaScript Engine for Client Micro-interactions -->
+<script>
+    (function() {
+      // Toggle Code View for List Module
+      const toggleCodeBtn = document.getElementById('toggleCodeBtnList');
+      const codeDrawer = document.getElementById('codeDrawerList');
+      if (toggleCodeBtn && codeDrawer) {
+        toggleCodeBtn.addEventListener('click', function() {
+          const isHidden = codeDrawer.classList.contains('hidden');
+          if (isHidden) {
+            codeDrawer.classList.remove('hidden');
+            toggleCodeBtn.innerHTML = '<span class="material-symbols-outlined text-[16px]">visibility_off</span> Tutup Skrip';
+          } else {
+            codeDrawer.classList.add('hidden');
+            toggleCodeBtn.innerHTML = '<span class="material-symbols-outlined text-[16px]">code</span> Lihat Skrip HTML';
+          }
+        });
+      }
+
+      // Copy Code Action
+      const copyBtn = document.getElementById('copyListCode');
+      if (copyBtn) {
+        copyBtn.addEventListener('click', function() {
+          const originalText = copyBtn.innerHTML;
+          copyBtn.innerHTML = '<span class="material-symbols-outlined text-[14px]">check</span> TERSALIN!';
+          setTimeout(() => {
+            copyBtn.innerHTML = originalText;
+          }, 1800);
+        });
+      }
+
+      // Shuffle simulation for list elements
+      const shuffleBtn = document.getElementById('shuffleListBtn');
+      const listContainer = document.getElementById('cyberDataList');
+      if (shuffleBtn && listContainer) {
+        shuffleBtn.addEventListener('click', function() {
+          const items = Array.from(listContainer.children);
+          if (items.length > 1) {
+            // Smoothly move first item to last
+            const first = items[0];
+            first.style.opacity = '0.3';
+            setTimeout(() => {
+              listContainer.appendChild(first);
+              first.style.opacity = '1';
+            }, 180);
+          }
+        });
+      }
+
+      // Toggle Blueprint Wireframe high-contrast mode
+      const wireframeBtn = document.getElementById('toggleWireframeBtn');
+      const blueprintContainer = document.getElementById('blueprintContainer');
+      let wireframeActive = false;
+      if (wireframeBtn && blueprintContainer) {
+        wireframeBtn.addEventListener('click', function() {
+          wireframeActive = !wireframeActive;
+          if (wireframeActive) {
+            blueprintContainer.classList.add('ring-2', 'ring-secondary-container', 'bg-surface-container-lowest');
+            wireframeBtn.classList.add('bg-secondary-container', 'text-surface-dim');
+          } else {
+            blueprintContainer.classList.remove('ring-2', 'ring-secondary-container', 'bg-surface-container-lowest');
+            wireframeBtn.classList.remove('bg-secondary-container', 'text-surface-dim');
+          }
+        });
+      }
+    })();
+  </script>
+</div></main><footer class="w-full bg-surface-container-lowest border-t border-outline-variant/30 py-xl mt-3xl relative overflow-hidden"><div class="absolute inset-x-0 top-0 h-[1px] bg-gradient-to-r from-transparent via-primary-container/40 to-transparent"></div><div class="max-w-viewport-max mx-auto px-gutter-desktop flex flex-col md:flex-row items-center justify-between gap-lg"><div class="flex flex-col gap-xs"><div class="flex items-center gap-xs"><span class="w-2 h-2 rounded-full bg-secondary-fixed-dim"></span><span class="font-headline-sm text-headline-sm text-on-surface">WEB_DEV_TELEMETRY // CORE</span></div><p class="font-body-sm text-body-sm text-on-surface-variant max-w-md">Instructional cyber deck for structural web foundations, algorithmic layouts, and modern semantic document models.</p></div><div class="flex flex-wrap items-center gap-xs font-label-caps text-label-caps text-on-surface-variant"><span class="px-xs py-sub-atom rounded bg-surface-container-low border border-outline-variant/40 text-on-surface">PROTO: W3C_DOM_L4</span><span class="px-xs py-sub-atom rounded bg-surface-container-low border border-primary-container/30 text-primary-container">GRID: 12_COL_DYNAMIC</span><span class="px-xs py-sub-atom rounded bg-surface-container-low border border-secondary-container/30 text-secondary-fixed-dim">FLEX: ACTIVE</span><span class="px-xs py-sub-atom rounded bg-surface-container-low border border-outline-variant/40 text-on-surface">LOC: SECTOR_07</span></div><div class="font-label-micro text-label-micro text-on-surface-variant text-center md:text-right">© 2025 CYBER_DEV FOUNDATION. ALL RIGHTS RESERVED.<br/><span class="text-outline">ENCRYPTED SECURE TELEMETRY FEED</span></div></div></footer></body></html>
