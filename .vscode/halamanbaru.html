@@ -146,9 +146,11 @@
             color: #666;
         }
 
+        /* PERUBAHAN UTAMA DI SINI (Menggunakan Flexbox agar card ke-3 di tengah) */
         .dashboard-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
             gap: 25px;
             margin-bottom: 40px;
         }
@@ -162,6 +164,8 @@
             display: flex;
             flex-direction: column;
             transition: transform 0.2s ease, box-shadow 0.2s ease;
+            width: 100%;
+            max-width: 500px;
         }
 
         .command-card:hover {
