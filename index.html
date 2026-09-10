@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kebakaran Hebat Hanguskan Puluhan Rumah di Asrama Kodam Mattoanging Makassar</title>
+    <title>Murni Wawasan Kebangsaan, Kuliah Umum Pangdam Hasanuddin di UIN Alauddin Dinilai Perkuat Motivasi Generasi Muda</title>
     <style>
         @page {
             size: A4;
@@ -200,6 +200,70 @@
             position: relative;
             z-index: 1;
         }
+
+        /* Styling Berita Terbaru / Dashboard Pilihan (Klik-able) */
+        .latest-news-section {
+            margin-top: 30px;
+            position: relative;
+            z-index: 1;
+        }
+        .latest-news-title {
+            font-size: 12pt;
+            font-weight: bold;
+            color: #1e3a8a;
+            text-transform: uppercase;
+            border-left: 4px solid #f97316;
+            padding-left: 8px;
+            margin-bottom: 12px;
+            letter-spacing: 0.5px;
+        }
+        .news-grid {
+            display: flex;
+            gap: 12px;
+            justify-content: space-between;
+        }
+        .news-card-link {
+            text-decoration: none;
+            flex: 1;
+            display: block;
+        }
+        .news-card {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 6px;
+            padding: 12px;
+            height: 100%;
+            transition: transform 0.2s, background-color 0.2s, border-color 0.2s;
+        }
+        .news-card-link:hover .news-card {
+            border-color: #1e3a8a;
+            background: #f1f5f9;
+            transform: translateY(-2px);
+        }
+        .news-category {
+            font-size: 7.5pt;
+            font-weight: bold;
+            color: #b91c1c;
+            text-transform: uppercase;
+            margin-bottom: 4px;
+        }
+        .news-card h4 {
+            font-size: 9.5pt;
+            color: #1e293b;
+            margin: 0 0 6px 0;
+            line-height: 1.3;
+        }
+        .news-card p {
+            font-size: 8.5pt;
+            color: #64748b;
+            margin: 0;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-align: left;
+        }
+
         .footer {
             margin-top: 25px;
             border-top: 1px solid #cbd5e1;
@@ -253,17 +317,53 @@
 
     <h2>Pihak Kampus</h2>
 
-    <p> lanjut, para akademisi menilai bahwa pelibatan tokoh militer dalam forum-forum ilmiah di perguruan tinggi sebenarnya membuka ruang dialog yang konstruktif antara sektor pertahanan dan dunia pendidikan. Mahasiswa diberikan kesempatan langsung untuk memahami perspektif strategis pertahanan negara secara objektif, bukan sekadar menerima informasi dari pihak-pihak luar yang kerap kali bias atau memuat kepentingan tertentu.</p>
+    <p>lanjut, para akademisi menilai bahwa pelibatan tokoh militer dalam forum-forum ilmiah di perguruan tinggi sebenarnya membuka ruang dialog yang konstruktif antara sektor pertahanan dan dunia pendidikan. Mahasiswa diberikan kesempatan langsung untuk memahami perspektif strategis pertahanan negara secara objektif, bukan sekadar menerima informasi dari pihak-pihak luar yang kerap kali bias atau memuat kepentingan tertentu.</p>
     
     <p>Di samping itu, penanaman nilai-nilai wawasan kebangsaan dinilai sangat krusial di tengah gempuran arus informasi global dan radikalisme yang menyasar generasi muda. Melalui pembekalan ini, mahasiswa diharapkan memiliki ketahanan mental dan ideologi yang kuat, sehingga tidak mudah terpengaruh oleh doktrin-doktrin transnasional yang berpotensi memecah belah keutuhan Negara Kesatuan Republik Indonesia (NKRI).</p>
 
     <p>Pihak rektorat UIN Alauddin Makassar juga menegaskan komitmennya untuk senantiasa menjaga iklim demokrasi dan kebebasan akademik di dalam kampus. Ruang-ruang diskusi kritis tetap dijamin keberadaannya, selama proses penyampaian pendapat tersebut dilakukan melalui mekanisme yang konstitusional, santun, dan menjunjung tinggi norma kesopanan selayaknya insan akademisi.</p>
 
-    <h2>Pihak Mahasiswa dan rektorat</h2>
+    <h2>Pihak Mahasiswa dan Rektorat</h2>
 
     <p>Para mahasiswa baru yang hadir dalam kuliah umum tersebut mengaku mendapatkan sudut pandang baru mengenai pentingnya kolaborasi lintas sektor dalam membangun bangsa. Sebagian besar dari mereka merasa termotivasi untuk fokus menempuh studi dan berkontribusi nyata bagi masyarakat, ketimbang teralihkan oleh narasi provokatif yang belum tentu kebenarannya.</p>
 
     <p>Dengan terselenggaranya kegiatan ini secara tertib dan lancar hingga akhir acara, pihak kampus berharap agar seluruh sivitas akademika dapat kembali fokus pada esensi utama Tri Dharma Perguruan Tinggi. Sinergi antara dunia pendidikan dan berbagai elemen strategis negara diharapkan terus terjalin harmonis demi mencetak SDM unggul yang berintegritas dan cinta tanah air.</p>
+
+    <!-- BAGIAN BERITA TERBARU DENGAN TAUTAN KLIK (HREF) -->
+    <div class="latest-news-section">
+        <div class="latest-news-title">Berita Terbaru & Pilihan Lainnya</div>
+        <div class="news-grid">
+            
+            <!-- Berita 1 -->
+            <a href="kebakaran.html" class="news-card-link">
+                <div class="news-card">
+                    <div class="news-category">Infrastruktur</div>
+                    <h4>Pemkot Makassar Genjot Pembangunan Waterfront City Tahun Ini</h4>
+                    <p>Pemerintah Kota Makassar terus mempercepat proyek strategis pembangunan kawasan pesisir...</p>
+                </div>
+            </a>
+
+            <!-- Berita 2 -->
+            <a href="kebakaran2.html" class="news-card-link">
+                <div class="news-card">
+                    <div class="news-category">Ekonomi & Bisnis</div>
+                    <h4>UMKM Kuliner Makassar Tembus Pasar Ekspor Asia Tenggara</h4>
+                    <p>Sejumlah produk olahan lokal khas Makassar kini mulai merambah pasar internasional...</p>
+                </div>
+            </a>
+
+            <!-- Berita 3 -->
+            <a href="kebakaran3.html" class="news-card-link">
+                <div class="news-card">
+                    <div class="news-category">Pendidikan</div>
+                    <h4>Festival Literasi Pelajar Sulsel Resmi Dibuka di Anjungan</h4>
+                    <p>Ajang tahunan ini melibatkan ratusan pelajar dari berbagai kabupaten/kota di Sulawesi Selatan...</p>
+                </div>
+            </a>
+
+        </div>
+    </div>
+    <!-- AKHIR BAGIAN BERITA TERBARU -->
 
     <div class="footer">
         &copy; 2026 Makassar Update. Hak cipta dilindungi undang-undang.
