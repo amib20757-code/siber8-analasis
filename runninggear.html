@@ -481,6 +481,87 @@
             opacity: 0.9;
         }
 
+        /* Modal Form Checkout */
+        .checkout-modal {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            padding: 30px;
+            border-radius: 16px;
+            z-index: 2500;
+            width: 90%;
+            max-width: 450px;
+            display: none;
+        }
+
+        .checkout-modal.active {
+            display: block;
+        }
+
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .modal-header h3 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.2rem;
+            text-transform: uppercase;
+        }
+
+        .modal-close {
+            background: none;
+            border: none;
+            color: var(--text-muted);
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .modal-close:hover {
+            color: var(--text-main);
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-label {
+            display: block;
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            margin-bottom: 6px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .form-input, .form-textarea {
+            width: 100%;
+            padding: 12px;
+            background: var(--bg-primary);
+            border: 1px solid var(--border);
+            color: var(--text-main);
+            border-radius: 8px;
+            outline: none;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 0.9rem;
+            transition: var(--transition);
+        }
+
+        .form-input:focus, .form-textarea:focus {
+            border-color: var(--accent);
+        }
+
+        .form-textarea {
+            resize: none;
+        }
+
         .overlay {
             position: fixed;
             top: 0;
@@ -559,11 +640,32 @@
                 <span>Total:</span>
                 <span id="cartTotalPrice">Rp 0</span>
             </div>
-            <button class="checkout-btn" onclick="checkoutWhatsApp()">Checkout via WhatsApp</button>
+            <button class="checkout-btn" onclick="openCheckoutModal()">Checkout via WhatsApp</button>
         </div>
     </div>
 
-    <!-- JavaScript Logika & Database Produk dengan Size -->
+    <!-- Modal Form Checkout Data Pelanggan -->
+    <div class="checkout-modal" id="checkoutModal">
+        <div class="modal-header">
+            <h3>Informasi Pengiriman</h3>
+            <button class="modal-close" onclick="closeCheckoutModal()"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        <div class="form-group">
+            <label class="form-label">Nama Lengkap</label>
+            <input type="text" id="buyerName" class="form-input" placeholder="Masukkan nama kamu">
+        </div>
+        <div class="form-group">
+            <label class="form-label">Alamat Lengkap Pengiriman</label>
+            <textarea id="buyerAddress" class="form-textarea" placeholder="Nama jalan, patokan, kecamatan, kota" rows="3"></textarea>
+        </div>
+        <div class="form-group">
+            <label class="form-label">Catatan (Opsional)</label>
+            <input type="text" id="buyerNote" class="form-input" placeholder="Misal: Warna cadangan / info tambahan">
+        </div>
+        <button onclick="submitWhatsAppCheckout()" class="checkout-btn">Kirim Pesanan ke WhatsApp</button>
+    </div>
+
+    <!-- JavaScript Logika & Database Produk dengan Size & Alur Checkout Lengkap -->
     <script>
         const products = [
             { id: 1, name: "Adidas Adizero Adios Pro 3", brand: "Adidas", category: "shoes", price: 3300000, image: "image/adp3.jpeg", sizes: ["40", "41", "42", "43", "44"] },
@@ -591,7 +693,6 @@
                 const card = document.createElement('div');
                 card.classList.add('product-card');
                 
-                // Buat HTML pilihan size secara dinamis
                 let sizesHTML = '';
                 if (product.sizes && product.sizes.length > 0) {
                     sizesHTML = `
@@ -622,7 +723,6 @@
             });
         }
 
-        // Fungsi saat tombol size diklik
         function selectSize(productId, size, element) {
             const container = document.getElementById(`sizes-${productId}`);
             const buttons = container.querySelectorAll('.size-btn');
@@ -646,6 +746,7 @@
         const cartItemsContainer = document.getElementById('cartItemsContainer');
         const cartCount = document.getElementById('cartCount');
         const cartTotalPrice = document.getElementById('cartTotalPrice');
+        const checkoutModal = document.getElementById('checkoutModal');
 
         cartToggleBtn.addEventListener('click', () => {
             cartDrawer.classList.add('open');
@@ -653,7 +754,10 @@
         });
 
         closeCartBtn.addEventListener('click', closeCart);
-        overlay.addEventListener('click', closeCart);
+        overlay.addEventListener('click', () => {
+            closeCart();
+            closeCheckoutModal();
+        });
 
         function closeCart() {
             cartDrawer.classList.remove('open');
@@ -663,7 +767,6 @@
         function addToCart(productId) {
             const product = products.find(p => p.id === productId);
             
-            // Ambil size yang sedang dipilih user di kartu produk tersebut
             let selectedSize = product.sizes ? product.sizes[0] : '-';
             if (product.sizes) {
                 const container = document.getElementById(`sizes-${productId}`);
@@ -673,7 +776,6 @@
                 }
             }
 
-            // Cek apakah item dengan ID dan SIZE yang sama sudah ada di keranjang
             const existingItem = cart.find(item => item.id === productId && item.size === selectedSize);
 
             if (existingItem) {
@@ -716,21 +818,48 @@
             cartTotalPrice.innerText = formatIDR(totalPrice);
         }
 
-        function checkoutWhatsApp() {
+        function openCheckoutModal() {
             if (cart.length === 0) {
                 alert("Keranjang kamu masih kosong!");
                 return;
             }
+            closeCart();
+            checkoutModal.classList.add('active');
+            overlay.classList.add('active');
+        }
+
+        function closeCheckoutModal() {
+            checkoutModal.classList.remove('active');
+            overlay.classList.remove('active');
+        }
+
+        function submitWhatsAppCheckout() {
+            const name = document.getElementById('buyerName').value.trim();
+            const address = document.getElementById('buyerAddress').value.trim();
+            const note = document.getElementById('buyerNote').value.trim();
+
+            if (!name || !address) {
+                alert("Mohon isi Nama dan Alamat pengiriman terlebih dahulu!");
+                return;
+            }
+
             let message = "Halo Kak, saya ingin memesan running gear dari *NATO Running Gear*:\n\n";
+            message += `*DATA PENERIMA:*\n`;
+            message += `- Nama: ${name}\n`;
+            message += `- Alamat: ${address}\n`;
+            if (note) message += `- Catatan: ${note}\n`;
+            message += `\n*DETAIL PESANAN:*\n`;
+
             let total = 0;
             cart.forEach(item => {
-                message += `- ${item.name} (Size: *${item.size}*) (${item.quantity}x) - ${formatIDR(item.price * item.quantity)}\n`;
+                message += `• ${item.name} (Size: *${item.size}*) (${item.quantity}x) - ${formatIDR(item.price * item.quantity)}\n`;
                 total += item.price * item.quantity;
             });
-            message += `\n*Total Keseluruhan: ${formatIDR(total)}*\n\nMohon informasi ketersediaan stok dan pembayarannya. Terima kasih!`;
+            message += `\n*Total Keseluruhan: ${formatIDR(total)}*\n\nMohon informasi ongkir dan ketersediaan rekening pembayarannya. Terima kasih!`;
             
             const encodedMessage = encodeURIComponent(message);
             window.open(`https://wa.me/6281234567890?text=${encodedMessage}`, '_blank');
+            closeCheckoutModal();
         }
 
         renderProducts();
