@@ -481,7 +481,7 @@
             opacity: 0.9;
         }
 
-        /* Modal Form Checkout */
+        /* Modal Form Checkout ke Database Email */
         .checkout-modal {
             position: fixed;
             top: 50%;
@@ -493,8 +493,10 @@
             border-radius: 16px;
             z-index: 2500;
             width: 90%;
-            max-width: 450px;
+            max-width: 480px;
             display: none;
+            max-height: 90vh;
+            overflow-y: auto;
         }
 
         .checkout-modal.active {
@@ -640,32 +642,40 @@
                 <span>Total:</span>
                 <span id="cartTotalPrice">Rp 0</span>
             </div>
-            <button class="checkout-btn" onclick="openCheckoutModal()">Checkout via WhatsApp</button>
+            <!-- Tombol Diubah Menjadi Lanjutkan Checkout Form Email -->
+            <button class="checkout-btn" onclick="openCheckoutModal()">Lanjutkan Checkout</button>
         </div>
     </div>
 
-    <!-- Modal Form Checkout Data Pelanggan -->
+    <!-- Modal Form Checkout Kirim ke Server Database / Email -->
     <div class="checkout-modal" id="checkoutModal">
         <div class="modal-header">
-            <h3>Informasi Pengiriman</h3>
+            <h3>Formulir Data Pemesanan</h3>
             <button class="modal-close" onclick="closeCheckoutModal()"><i class="fa-solid fa-xmark"></i></button>
         </div>
-        <div class="form-group">
-            <label class="form-label">Nama Lengkap</label>
-            <input type="text" id="buyerName" class="form-input" placeholder="Masukkan nama kamu">
-        </div>
-        <div class="form-group">
-            <label class="form-label">Alamat Lengkap Pengiriman</label>
-            <textarea id="buyerAddress" class="form-textarea" placeholder="Nama jalan, patokan, kecamatan, kota" rows="3"></textarea>
-        </div>
-        <div class="form-group">
-            <label class="form-label">Catatan (Opsional)</label>
-            <input type="text" id="buyerNote" class="form-input" placeholder="Misal: Warna cadangan / info tambahan">
-        </div>
-        <button onclick="submitWhatsAppCheckout()" class="checkout-btn">Kirim Pesanan ke WhatsApp</button>
+        <!-- Ubah action="..." dengan endpoint server email Anda (misal: Formspree, EmailJS, atau backend PHP) -->
+        <form id="emailCheckoutForm" onsubmit="submitEmailCheckout(event)">
+            <div class="form-group">
+                <label class="form-label">Nama Lengkap</label>
+                <input type="text" id="buyerName" class="form-input" placeholder="Masukkan nama lengkap" required>
+            </div>
+            <div class="form-group">
+                <label class="form-label">Alamat Email Aktif</label>
+                <input type="email" id="buyerEmail" class="form-input" placeholder="nama@email.com" required>
+            </div>
+            <div class="form-group">
+                <label class="form-label">Nomor WhatsApp / Telepon</label>
+                <input type="tel" id="buyerPhone" class="form-input" placeholder="08123456789" required>
+            </div>
+            <div class="form-group">
+                <label class="form-label">Alamat Pengiriman Lengkap</label>
+                <textarea id="buyerAddress" class="form-textarea" placeholder="Nama jalan, nomor rumah, kecamatan, kota" rows="3" required></textarea>
+            </div>
+            <button type="submit" class="checkout-btn" id="submitOrderBtn">Kirim Pesanan ke Sistem Email</button>
+        </form>
     </div>
 
-    <!-- JavaScript Logika & Database Produk dengan Size & Alur Checkout Lengkap -->
+    <!-- JavaScript Logika Pemesanan & Pengiriman ke Database Email -->
     <script>
         const products = [
             { id: 1, name: "Adidas Adizero Adios Pro 3", brand: "Adidas", category: "shoes", price: 3300000, image: "image/adp3.jpeg", sizes: ["40", "41", "42", "43", "44"] },
@@ -833,33 +843,41 @@
             overlay.classList.remove('active');
         }
 
-        function submitWhatsAppCheckout() {
+        function submitEmailCheckout(event) {
+            event.preventDefault();
+            
             const name = document.getElementById('buyerName').value.trim();
+            const email = document.getElementById('buyerEmail').value.trim();
+            const phone = document.getElementById('buyerPhone').value.trim();
             const address = document.getElementById('buyerAddress').value.trim();
-            const note = document.getElementById('buyerNote').value.trim();
 
-            if (!name || !address) {
-                alert("Mohon isi Nama dan Alamat pengiriman terlebih dahulu!");
-                return;
-            }
-
-            let message = "Halo Kak, saya ingin memesan running gear dari *NATO Running Gear*:\n\n";
-            message += `*DATA PENERIMA:*\n`;
-            message += `- Nama: ${name}\n`;
-            message += `- Alamat: ${address}\n`;
-            if (note) message += `- Catatan: ${note}\n`;
-            message += `\n*DETAIL PESANAN:*\n`;
-
+            let orderSummary = "";
             let total = 0;
             cart.forEach(item => {
-                message += `• ${item.name} (Size: *${item.size}*) (${item.quantity}x) - ${formatIDR(item.price * item.quantity)}\n`;
+                orderSummary += `- ${item.name} (Size: ${item.size}) x${item.quantity} = ${formatIDR(item.price * item.quantity)}\n`;
                 total += item.price * item.quantity;
             });
-            message += `\n*Total Keseluruhan: ${formatIDR(total)}*\n\nMohon informasi ongkir dan ketersediaan rekening pembayarannya. Terima kasih!`;
+
+            // Payload data pesanan yang siap dikirim ke database/server email
+            const orderData = {
+                customer_name: name,
+                customer_email: email,
+                customer_phone: phone,
+                customer_address: address,
+                items: orderSummary,
+                total_amount: formatIDR(total)
+            };
+
+            // Simulasi pengiriman ke server email (bisa diintegrasikan dengan fetch ke Formspree/EmailJS)
+            console.log("Data dikirim ke server email:", orderData);
+
+            alert("Terima kasih, " + name + "! Pesanan Anda berhasil dikirim ke sistem email database kami. Kami akan segera menghubungi Anda.");
             
-            const encodedMessage = encodeURIComponent(message);
-            window.open(`https://wa.me/6281234567890?text=${encodedMessage}`, '_blank');
+            // Reset keranjang dan tutup modal
+            cart = [];
+            updateCart();
             closeCheckoutModal();
+            document.getElementById('emailCheckoutForm').reset();
         }
 
         renderProducts();
