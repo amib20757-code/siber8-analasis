@@ -10,8 +10,8 @@
     
     <style>
         :root {
-            --bg-primary: #080808;
-            --bg-secondary: #121212;
+            --bg-primary: rgba(8, 8, 8, 0.92);
+            --bg-secondary: rgba(18, 18, 18, 0.95);
             --accent: #d4ff00; /* Neon Lime */
             --text-main: #f5f5f7;
             --text-muted: #8e8e93;
@@ -27,10 +27,86 @@
         }
 
         body {
-            background-color: var(--bg-primary);
+            background-color: #080808;
             color: var(--text-main);
             line-height: 1.6;
             -webkit-font-smoothing: antialiased;
+            position: relative;
+            min-height: 100vh;
+        }
+
+        /* Background Orang Lari di Track dengan Efek Blur */
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://images.unsplash.com/photo-1461896836934-ffe607ba8211?q=80&w=1600&auto=format&fit=crop') no-repeat center center/cover;
+            filter: blur(8px) brightness(0.35);
+            z-index: -1;
+        }
+
+        /* Halaman Login Section */
+        #loginPage {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(8, 8, 8, 0.85);
+            backdrop-filter: blur(12px);
+            z-index: 3000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .login-card {
+            background: rgba(18, 18, 18, 0.9);
+            border: 1px solid var(--border);
+            padding: 40px;
+            border-radius: 20px;
+            width: 100%;
+            max-width: 420px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+            text-align: center;
+        }
+
+        .login-card h2 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.8rem;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+        }
+
+        .login-card h2 span {
+            color: var(--accent);
+        }
+
+        .login-card p {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            margin-bottom: 25px;
+        }
+
+        .login-card .form-group {
+            text-align: left;
+            margin-bottom: 20px;
+        }
+
+        .login-error {
+            color: #ff4d4d;
+            font-size: 0.8rem;
+            margin-bottom: 15px;
+            display: none;
+        }
+
+        /* Tampilan Utama E-Commerce (Awalnya Disembunyikan) */
+        #appContent {
+            display: none;
         }
 
         /* Header & Navbar Elegant Design */
@@ -85,27 +161,40 @@
 
         .nav-icons {
             display: flex;
-            gap: 20px;
+            gap: 15px;
             align-items: center;
         }
 
-        .cart-btn {
+        .cart-btn, .logout-btn {
             background: var(--bg-secondary);
             border: 1px solid var(--border);
             color: var(--text-main);
-            width: 45px;
             height: 45px;
-            border-radius: 50%;
+            border-radius: 30px;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1rem;
             cursor: pointer;
-            position: relative;
             transition: var(--transition);
         }
 
-        .cart-btn:hover {
+        .cart-btn {
+            width: 45px;
+            border-radius: 50%;
+            font-size: 1rem;
+            position: relative;
+        }
+
+        .logout-btn {
+            padding: 0 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            gap: 8px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .cart-btn:hover, .logout-btn:hover {
             border-color: var(--accent);
             color: var(--accent);
             transform: scale(1.05);
@@ -116,7 +205,7 @@
             top: -5px;
             right: -5px;
             background: var(--accent);
-            color: var(--bg-primary);
+            color: #080808;
             font-size: 0.65rem;
             font-weight: 700;
             width: 20px;
@@ -162,7 +251,7 @@
 
         .btn-primary {
             background: var(--accent);
-            color: var(--bg-primary);
+            color: #080808;
             padding: 15px 35px;
             font-weight: 700;
             font-size: 0.9rem;
@@ -174,6 +263,7 @@
             display: inline-block;
             transition: var(--transition);
             text-transform: uppercase;
+            width: 100%;
         }
 
         .btn-primary:hover {
@@ -225,7 +315,7 @@
 
         .filter-btn.active, .filter-btn:hover {
             background: var(--text-main);
-            color: var(--bg-primary);
+            color: #080808;
             border-color: var(--text-main);
         }
 
@@ -324,7 +414,7 @@
         }
 
         .size-btn {
-            background: var(--bg-primary);
+            background: rgba(8, 8, 8, 0.5);
             border: 1px solid var(--border);
             color: var(--text-muted);
             padding: 6px 10px;
@@ -342,7 +432,7 @@
 
         .size-btn.selected {
             background: var(--accent);
-            color: var(--bg-primary);
+            color: #080808;
             border-color: var(--accent);
             font-weight: 700;
         }
@@ -362,7 +452,7 @@
 
         .add-to-cart:hover {
             background: var(--accent);
-            color: var(--bg-primary);
+            color: #080808;
             border-color: var(--accent);
         }
 
@@ -450,7 +540,7 @@
         .cart-footer {
             padding: 25px 30px;
             border-top: 1px solid var(--border);
-            background: var(--bg-primary);
+            background: rgba(8, 8, 8, 0.95);
         }
 
         .cart-total {
@@ -465,7 +555,7 @@
         .checkout-btn {
             width: 100%;
             background: var(--accent);
-            color: var(--bg-primary);
+            color: #080808;
             border: none;
             padding: 15px;
             border-radius: 10px;
@@ -546,7 +636,7 @@
         .form-input, .form-textarea {
             width: 100%;
             padding: 12px;
-            background: var(--bg-primary);
+            background: rgba(8, 8, 8, 0.6);
             border: 1px solid var(--border);
             color: var(--text-main);
             border-radius: 8px;
@@ -590,43 +680,69 @@
 </head>
 <body>
 
-    <!-- Header & Navbar -->
-    <header>
-        <div class="nav-container">
-            <a href="#" class="logo">
-                NATO<span>.</span>
-                <span class="logo-sub">Running Gear</span>
-            </a>
-            <div class="nav-icons">
-                <button class="cart-btn" id="cartToggleBtn">
-                    <i class="fa-solid fa-bag-shopping"></i>
-                    <span class="cart-count" id="cartCount">0</span>
-                </button>
+    <!-- HALAMAN LOGIN -->
+    <div id="loginPage">
+        <div class="login-card">
+            <h2>NATO <span>RUNNING</span></h2>
+            <p>Bali Marathon Edition - Silakan Login</p>
+            <div class="login-error" id="loginError">Username atau Password salah!</div>
+            <form id="loginForm" onsubmit="handleLogin(event)">
+                <div class="form-group">
+                    <label class="form-label">Username</label>
+                    <input type="text" id="loginUser" class="form-input" placeholder="Masukkan username" required>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Password</label>
+                    <input type="password" id="loginPassword" class="form-input" placeholder="Masukkan password" required>
+                </div>
+                <button type="submit" class="btn-primary" style="margin-top: 10px;">Masuk ke Toko</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- KONTEN UTAMA E-COMMERCE -->
+    <div id="appContent">
+        <!-- Header & Navbar -->
+        <header>
+            <div class="nav-container">
+                <a href="#" class="logo">
+                    NATO<span>.</span>
+                    <span class="logo-sub">Running Gear</span>
+                </a>
+                <div class="nav-icons">
+                    <button class="cart-btn" id="cartToggleBtn">
+                        <i class="fa-solid fa-bag-shopping"></i>
+                        <span class="cart-count" id="cartCount">0</span>
+                    </button>
+                    <button class="logout-btn" onclick="handleLogout()">
+                        <i class="fa-solid fa-right-from-bracket"></i> Logout
+                    </button>
+                </div>
             </div>
-        </div>
-    </header>
+        </header>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-content">
-            <h1>Engineered For <span>Speed</span></h1>
-            <p>Temukan koleksi perlengkapan lari eksklusif pilihan dari merek-merek elit dunia untuk menemani setiap langkah dan rekor terbaikmu.</p>
-            <a href="#shop" class="btn-primary">Eksplor Katalog</a>
-        </div>
-    </section>
-
-    <!-- Main Content Katalog -->
-    <div class="container" id="shop">
-        <div class="section-header">
-            <h2 class="section-title">Katalog Produk</h2>
-            <div class="filter-buttons">
-                <button class="filter-btn active" data-filter="all">Semua</button>
-                <button class="filter-btn" data-filter="shoes">Sepatu</button>
-                <button class="filter-btn" data-filter="apparel">Apparel</button>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1>NATO RUUNNING <span>GEAR</span></h1>
+                <p>Temukan koleksi perlengkapan lari eksklusif pilihan dari merek-merek elit dunia untuk menaklukkan rute balapmu.</p>
+                <a href="#shop" class="btn-primary" style="width: auto;">Eksplor Katalog</a>
             </div>
-        </div>
+        </section>
 
-        <div class="product-grid" id="productGrid"></div>
+        <!-- Main Content Katalog -->
+        <div class="container" id="shop">
+            <div class="section-header">
+                <h2 class="section-title">Katalog Produk</h2>
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-filter="all">Semua</button>
+                    <button class="filter-btn" data-filter="shoes">Sepatu</button>
+                    <button class="filter-btn" data-filter="apparel">Apparel</button>
+                </div>
+            </div>
+
+            <div class="product-grid" id="productGrid"></div>
+        </div>
     </div>
 
     <!-- Cart Drawer -->
@@ -675,6 +791,33 @@
 
     <!-- JavaScript Logika & Database Produk -->
     <script>
+        // Validasi Login Admin
+        function handleLogin(event) {
+            event.preventDefault();
+            const userInput = document.getElementById('loginUser').value.trim();
+            const passInput = document.getElementById('loginPassword').value.trim();
+            const errorMsg = document.getElementById('loginError');
+
+            if (userInput === 'admin' && passInput === 'admin123') {
+                errorMsg.style.display = 'none';
+                document.getElementById('loginPage').style.display = 'none';
+                document.getElementById('appContent').style.display = 'block';
+                renderProducts();
+            } else {
+                errorMsg.style.display = 'block';
+            }
+        }
+
+        // Fungsi Logout
+        function handleLogout() {
+            document.getElementById('appContent').style.display = 'none';
+            document.getElementById('loginPage').style.display = 'flex';
+            document.getElementById('loginForm').reset();
+            document.getElementById('loginError').style.display = 'none';
+            cart = [];
+            updateCart();
+        }
+
         const products = [
             { id: 1, name: "Adidas Adizero Adios Pro 3", brand: "Adidas", category: "shoes", price: 3300000, image: "image/adp3.jpeg", sizes: ["40", "41", "42", "43", "44"] },
             { id: 2, name: "Nike Alphafly 3", brand: "Nike", category: "shoes", price: 3999000, image: "image/nike apf 3.jpeg", sizes: ["40", "41", "42", "43", "44", "45"] },
@@ -849,7 +992,7 @@
             const phone = document.getElementById('buyerPhone').value.trim();
             const address = document.getElementById('buyerAddress').value.trim();
 
-            let message = "Halo Kak, saya ingin memesan running gear dari *NATO Running Gear*:\n\n";
+            let message = "Halo Kak, saya ingin memesan running gear dari *NATO Running Gear* (Bali Marathon Edition):\n\n";
             message += `*DATA PEMESAN:*\n`;
             message += `- Nama: ${name}\n`;
             message += `- Email: ${email}\n`;
@@ -865,15 +1008,11 @@
             message += `\n*Total Keseluruhan: ${formatIDR(total)}*\n\nMohon informasi total pembayaran dan ketersediaannya. Terima kasih!`;
             
             const encodedMessage = encodeURIComponent(message);
-            
-            // Mengarahkan langsung ke nomor WhatsApp yang diminta
             const waNumber = "6289518436044";
             window.open(`https://wa.me/${waNumber}?text=${encodedMessage}`, '_blank');
             
             closeCheckoutModal();
         }
-
-        renderProducts();
     </script>
 </body>
 </html>
